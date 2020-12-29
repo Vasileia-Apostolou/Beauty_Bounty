@@ -1,0 +1,13 @@
+body {
+    background-color: #f5ebff;
+} 
+
+.all-products-text {
+    text-align: center;
+}
+
+.card-footer {
+    text-align: center;
+    background: transparent;
+    border-color: transparent;
+}
