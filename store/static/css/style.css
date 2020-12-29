@@ -12,6 +12,36 @@ body {
     border-color: transparent;
 }
 
+/* -------- DROPDOWN MENU ---------*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+
+.dropdown-search-bar {
+    display: none;
+    position: absolute;
+    min-width: 300px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 /* --------- PRODUCTS --------- */
 .product-name {
     text-align: center;
@@ -59,4 +89,20 @@ body {
     background-size: cover;
     margin-top: 10%;
     
+}
+
+/* -------- FOOTER --------*/
+footer {
+    /* background-color: black;
+    color: white;
+    display: flex; */
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 10%;
+   background-color: black;
+   color: white;
+   text-align: center;
+   
 }
