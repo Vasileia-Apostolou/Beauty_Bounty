@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} 
+Product 
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-6 col-md-6">
+            <img class="product-image" src="{% static 'images/product1.jpg' %}" alt="">
+        </div>
+        <div class="col-12 col-lg-6 col-md-6">
+            <div>
+                <h1 class="product-name">T-shirt</h1>
+                <p class="product-price">$25.00</p>
+                <p class="product-details-text">Product Details</p>
+                <p class="product-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit libero molestias unde harum! Non, nesciunt facere doloribus adipisci minima officia a assumenda placeat quod corporis amet id saepe esse distinctio accusantium fugiat suscipit nulla minus consequatur similique dignissimos reiciendis! Magnam amet error sunt eveniet soluta laudantium perferendis quas mollitia similique!</p>
+                <p class="product-status">Out Of Stock</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
