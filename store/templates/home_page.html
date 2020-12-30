@@ -22,15 +22,16 @@ Home
 
 <div class="container">
     <div class="row">
-        {% for i in '12345678' %}
+        {% for product in products %}
         <div class="col-6 mx-auto col-md-4 col-lg-3">
-            <div class="card">
+            <!-- <div class="card"> -->
+            <div>
                 <div class="py-2">
-                  <img src="{% static 'images/product1.jpg' %}" class="card-img-top" alt="">
+                  <img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}">
                 </div>
                 <div class="card-footer">
-                    <p>T-shirt</p>
-                    <h5 class="price-tag">$25.00</h5>
+                    <p>{{product.name}}</p>
+                    <h5 class="price-tag">${{product.price}}</h5>
                 </div>
             </div>
         </div>

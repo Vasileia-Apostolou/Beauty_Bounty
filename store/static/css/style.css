@@ -1,5 +1,5 @@
 body {
-    background-color: #f5ebff;
+    /* background-color: #f5ebff; */
 } 
 
 .all-products-text {
@@ -93,10 +93,7 @@ body {
 
 /* -------- FOOTER --------*/
 footer {
-    /* background-color: black;
-    color: white;
-    display: flex; */
-   position: absolute;
+   display: flex; 
    left: 0;
    bottom: 0;
    width: 100%;
