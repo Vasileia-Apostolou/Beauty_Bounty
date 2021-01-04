@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'store/base.html' %}
 {% load static %}
 {% block title %} 
 Product 
@@ -7,7 +7,7 @@ Product
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-6 col-lg-6 col-md-6">
+        <div class="col-12 col-lg-6 col-md-6">
             <img class="product-image" src="{{product.image.url}}" alt="">
         </div>
         <div class="col-12 col-lg-6 col-md-6">
@@ -19,7 +19,7 @@ Product
                 {% if product.stock <= 0 %}
                 <p class="product-status">Out Of Stock</p>
                 {% else %}
-                <a href="">Add To Cart</a>
+                <a class="product-status" href="">Add To Cart</a>
                 {% endif %}
             </div>
         </div>
