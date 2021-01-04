@@ -1,16 +1,13 @@
 <nav class="navbar navbar-expand-md nav-extended bg-dark">
-        <a class="navbar-brand" href="#">Beauty Bounty</a>
+        <a class="navbar-brand" href="/">Beauty Bounty</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
-                <li class="nav-item dropdown"><a class="nav-link" href="">All Products</a></li>
+                <li class="nav-item dropdown"><a class="nav-link" href="{% url 'home' %}">All Products</a></li>
                 <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown">Brands</a>
+                    {% for category in links %}
                     <div class="dropdown-content dropdown-menu">
-                        <a class="dropdown-item" href="#">Color Pop Cosmetics</a>
-                        <a class="dropdown-item" href="#">Mac Cosmetics</a>
-                        <a class="dropdown-item" href="#">Huda Beauty</a>
-                        <a class="dropdown-item" href="#">Fenty Beauty</a>
-                        <a class="dropdown-item" href="#">Fenty Skin</a>
+                        <a class="dropdown-item" href="{{category.category_url}}">{{category.name}}</a>{% endfor %}
                     </div>
                 </li>
                 <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown">New</a>

@@ -1,5 +1,5 @@
 body {
-    /* background-color: #f5ebff; */
+    background-color: #f8f0ff; 
 } 
 
 .all-products-text {
@@ -50,6 +50,7 @@ body {
     padding-top: 20px;
     padding-left: 15px;
     margin-right: 10%;
+    color: red;
 }
 
 .product-details-text {
@@ -70,6 +71,7 @@ body {
     padding-top: 20px;
     padding-left: 15px;
     margin-right: 10%;
+    color: rgb(0, 255, 42);
 }
 
 .product-status {
@@ -84,11 +86,8 @@ body {
 /* -------- IMAGES --------- */
 
 .product-image {
-    min-height: auto;
-    width: 100%;
-    background-size: cover;
-    margin-top: 10%;
-    
+width: 20%;
+height: 30%;
 }
 
 /* -------- FOOTER --------*/
