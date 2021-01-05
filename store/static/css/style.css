@@ -96,6 +96,15 @@ background-size: cover;
     text-align: center;
 }
 
+/* ------ CART --------*/
+.thead-text {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    background-color: white !important;
+
+}
+
 
 /* -------- FOOTER --------*/
 footer {
