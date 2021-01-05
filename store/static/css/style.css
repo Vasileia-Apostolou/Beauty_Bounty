@@ -114,7 +114,9 @@ footer {
     /* padding-top: 5%; */
 }
 
-.about-footer-text {
+.about-footer-text,
+.shopping-cart-text,
+.contact-footer-text {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 7px;
@@ -125,12 +127,6 @@ footer {
     text-transform: uppercase;
     letter-spacing: 7px;
     padding-top: 5px;
-}
-
-.contact-footer-text {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 7px;
 }
 
 .contact-by-email {
