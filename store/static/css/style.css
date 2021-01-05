@@ -125,6 +125,23 @@ footer {
     padding-top: 5px;
 }
 
+.contact-footer-text {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+.contact-by-email {
+    text-decoration: none;
+    color: #f8f0ff;
+    text-shadow: 0px 1px 2px #d6a9fc;
+}
+
+.contact-by-email:hover{
+    color: #d6a9fc;
+}
+
+
 .socials {
     display: flex;
 }
