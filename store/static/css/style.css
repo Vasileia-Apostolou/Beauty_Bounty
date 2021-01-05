@@ -1,5 +1,5 @@
 body {
-    background-color: #f8f0ff; 
+    /* background-color: #f8f0ff;  */
 }
 
 .try {
@@ -100,7 +100,7 @@ background-size: cover;
 .thead-text {
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 7px;
+    letter-spacing: 2px;
     background-color: white !important;
 
 }

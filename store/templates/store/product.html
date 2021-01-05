@@ -19,7 +19,7 @@ Product
                 {% if product.stock <= 0 %}
                 <p class="product-status">Out Of Stock</p>
                 {% else %}
-                <a class="product-status" href="">Add To Cart</a>
+                <a class="product-status" href="{% url 'add_cart' product.id %}">Add To Cart</a>
                 {% endif %}
             </div>
         </div>
