@@ -112,10 +112,17 @@ footer {
     padding-top: 5%;
 }
 
-.connect-text {
+.about-footer-text {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+.connect-footer-text {
     text-align: right;
     text-transform: uppercase;
     letter-spacing: 7px;
+    padding-top: 5px;
 }
 
 .socials {
@@ -127,7 +134,7 @@ footer {
     padding-top: 10px;
     font-size: 30px;
     color: #f8f0ff;
-    text-shadow: 1px 2px 2px #d6a9fc;
+    text-shadow: 1px 2px 1px #d6a9fc;
 }
 
 .socials li a i:hover{
