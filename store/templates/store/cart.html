@@ -12,9 +12,6 @@ Cart
     <p>Click<a href="{% url 'home' %}">here</a>to go back</p>
 </div>
 {% else %}
-
-
-
 <br>
 <br>
 <br>
@@ -77,7 +74,7 @@ Cart
                    <br>
                    Price: {{cart_item.product.price}} 
                    <br>
-                   Quantity: {{cart_item.product.quantity}} x {{cart_item.product.price}}
+                   Quantity: {{cart_item.quantity}} x {{cart_item.product.price}}
                </td>
                <td>
                    Total: {{cart_item.total}}
