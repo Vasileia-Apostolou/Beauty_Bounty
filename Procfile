@@ -1,1 +1,1 @@
-web: python run.py
+web: gunicorn beauty-bounty.wsgi:application

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path, os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'zu7wp^sp5%%skb+(l)^cj#z$#w##5j%8156k-kjyhc=ut4-3c='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://beauty-bounty.herokuapp.com/']
 
 
 # Application definition
@@ -76,10 +77,16 @@ WSGI_APPLICATION = 'beauty_bounty.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        postgres://eoxlgjvactvfbg:35cc731edf5d2dcea5d7ae673432aee858fb049e7c79fb77ef68ec051c317e30@ec2-100-25-100-81.compute-1.amazonaws.com:5432/d8dnp6a03lnsma
     }
 }
 
