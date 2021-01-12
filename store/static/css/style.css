@@ -20,11 +20,15 @@ body {
     font-size: 40px;
     font-family: "Great Vibes", fantasy;
     margin-left: 20px;
-    color: black;
+    color: #391066;
 }
 
 .navbar li a {
     color: black;
+}
+
+.navbar-icons {
+    color: #391066 !important;
 }
 
 /* -------- DROPDOWN MENU ---------*/
@@ -194,12 +198,14 @@ footer {
 
 .contact-by-email {
     text-decoration: none;
-    color: #f8f0ff;
-    text-shadow: 0px 0px 2px #d6a9fc;
+    color: #360f63;
+    text-shadow: 0px 1px 1px #fff;
 }
 
 .contact-by-email:hover{
-    color: #d6a9fc;
+    color: #511694;
+    text-shadow: 0px 0px 1px #8957c2;
+
 }
 
 .socials {
@@ -210,12 +216,12 @@ footer {
     margin-left: 30px;
     /* padding-top: 10px; */
     font-size: 30px;
-    color: #f8f0ff;
-    text-shadow: 0px 1px 2px #d6a9fc;
+    color: #391066;
+    text-shadow: 0px 0px 1px #9e62d9;
     
 }
 
 .socials li a i:hover{
-    color: #d6a9fc;
+    color: #9e62d9;
 }
 

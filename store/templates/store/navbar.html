@@ -33,7 +33,7 @@
                         <a class="dropdown-item" href="">Yves Saint Laurent</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown"><i class="far fa-user"></i></a>
+                <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown"><i class="far fa-user navbar-icons"></i></a>
                     <div class="dropdown-menu dropdown-content">
                         <a class="dropdown-item" href="">Login</a>
                         <a class="dropdown-item" href="">Register</a>
@@ -42,7 +42,7 @@
                 <!-- <li class="nav-item"><a class="nav-link px-3" href="" data-toggle="dropdown">Login</a></li>
                 <li class="nav-item"><a class="nav-link px-3" href="" data-toggle="dropdown">Register</a></li> -->
                 <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown"><i
-                            class="fas fa-search search"></i></a>
+                            class="fas fa-search search navbar-icons"></i></a>
                     <form class="form-inline dropdown-content dropdown-menu dropdown-search-bar">
                         <div>
                             <input type="text" placeholder="Search">
@@ -53,7 +53,7 @@
                      </form>
                 </li>
                 {% if item_count > 0 %}
-                <li class="nav-item"><a class="nav-link px-3" href="{% url 'cart_detail' %}" data-toggle="dropdown"><i class="fas fa-shopping-bag"></i>({{item_count}})</a>
+                <li class="nav-item"><a class="nav-link px-3" href="{% url 'cart_detail' %}" data-toggle="dropdown"><i class="fas fa-shopping-bag navbar-icons"></i> ({{item_count}})</a>
                 {% endif %}
 
                 </li>
