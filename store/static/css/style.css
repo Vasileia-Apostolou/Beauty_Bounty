@@ -3,12 +3,17 @@ body {
 }
 
 .try {
-    background-color: blue;
+    display: flex;
+    padding-top: 5px;
 }
 
 /* -------- NAV -------- */
 .navbar-brand {
     text-align: center;
+}
+
+.navbar li a {
+    color: #f8f0ff;
 }
 
 /* -------- DROPDOWN MENU ---------*/
@@ -30,7 +35,7 @@ body {
 }
 
 .dropdown-content a {
-  color: black;
+  color: black !important;
   padding: 5px 5px;
   text-decoration: none;
   text-align: center;
@@ -102,6 +107,38 @@ background-size: cover;
     text-transform: uppercase;
     letter-spacing: 2px;
     background-color: white !important;
+}
+
+.empty-card-text {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.go-back-href {
+   text-align: center;
+}
+
+.here-text {
+    text-decoration: none;
+}
+
+/* -------- CHECKOUT -------*/
+.total-price {
+    text-align: center;
+    font-size: 18px;
+}
+
+.go-back-button {
+    background-color: black;
+    color: white;
+    float: right;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+
+.stripe-button {
+    background-color: blueviolet;
 
 }
 

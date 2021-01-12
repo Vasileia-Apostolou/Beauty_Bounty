@@ -11,9 +11,9 @@ Cart
 <br>
 <br>
 <div>
-    <h2>Empty Cart</h2>
+    <h2 class="empty-card-text">Empty Cart</h2>
     <br>
-    <p>Click<a href="{% url 'home' %}">here</a>to go back</p>
+    <p class="go-back-href">Click <a class="here-text" href="{% url 'home' %}"> here </a> to go back</p>
 </div>
 {% else %}
 <br>
@@ -26,35 +26,6 @@ Cart
 </div>
 <br>
 <div class="row">
-    <div class="col col-sm-12 col-md-6 col-lg-6">
-       <table class="table">
-           <thead>
-               <tr>
-                   <th class="thead-text" olspan="4">
-                       Check Out
-                   </th>
-               </tr>
-           </thead>
-           <tbody>
-               <tr>
-                   <td class="text-center">
-                      Order Summary
-                   </td>
-               </tr>
-               <tr>
-               <td>
-                <strong>Total: {{total}}</strong>
-               </td>
-               </tr>
-               </tbody>
-       </table>
-       <div>
-           <a href="{% url 'home' %}">
-               <button type="button" class="btn bg-dark text-light">Go Back</button>
-           </a>
-       </div>
-    </div>
-
     <div class="col col-sm-12 col-md-6 col-lg-6">
         <table class="table">
            <thead>
@@ -85,17 +56,60 @@ Cart
                </td>
                {% if cart_item.quantity < cart_item.product.stock %}
                <td>
-                   <a href="{% url 'add_cart' cart_item.product.id %}"><i class="fas fa-plus"></i></a>
-                   <a href="quantity-icons"><i class="fas fa-minus"></i></a>
-                   <a href="quantity-icons"><i class="far fa-trash-alt"></i></a>
+                   <a class="add-quantity try " href="{% url 'add_cart' cart_item.product.id %}"><i class="fas fa-plus"></i></a>
+                   <a class="try" href=""><i class="fas fa-minus"></i></a>
+                   <a class="try" href=""><i class="far fa-trash-alt"></i></a>
                </td>
                {% else %}
-                <a href="quantity-icons"><i class="fas fa-minus"></i></a>
-                <a href="quantity-icons"><i class="far fa-trash-alt"></i></a>
+                <a class="try2" href=""><i class="fas fa-minus"></i></a>
+                <a class="try2" href=""><i class="far fa-trash-alt"></i></a>
                {% endif %}
            </tr>
            {% endfor %}
        </table>
+    </div>
+    <div class="col col-sm-12 col-md-6 col-lg-6">
+       <table class="table">
+           <thead>
+               <tr>
+                   <th class="thead-text" olspan="4">
+                       Check Out
+                   </th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td class="text-center">
+                      Order Summary
+                   </td>
+               </tr>
+               <tr>
+               <td class="total-price">
+                <strong>Total: {{total}}</strong>
+               </td>
+               </tr>
+               </tbody>
+       </table>
+       <div>
+           <form class="" action="" method="POST">
+               {% csrf_token %}
+               <script src="https://checkout.stripe.com/checkout.js"
+               class="stripe-button"
+               data-key="{{ data_key }}"
+               data-amount="{{ stripe_total }}"
+               data-name="Personal Details"
+               data-description="{{ description }}"
+               data-locale="auto"
+               data-currency="usd"
+               data-shipping-address="true"
+               data-billing-address="true"
+               data-zip-code="true">
+               </script>
+           </form>
+           <a href="{% url 'home' %}">
+               <button type="button" class="btn-small hvr-grow go-back-button">Go Back</button>
+           </a>
+       </div>
     </div>
 </div>
 {% endif %}

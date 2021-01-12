@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path, os
 import dj_database_url
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'zu7wp^sp5%%skb+(l)^cj#z$#w##5j%8156k-kjyhc=ut4-3c='
+SECRET_KEY = os.environ.get('SECRET_KEY', 'zu7wp^sp5%%skb+(l)^cj#z$#w##5j%8156k-kjyhc=ut4-3c=')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://beauty-bounty.herokuapp.com/']
+# ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
 
 # Application definition
@@ -39,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'store',
+    'stripe',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -77,18 +80,17 @@ WSGI_APPLICATION = 'beauty_bounty.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        postgres://eoxlgjvactvfbg:35cc731edf5d2dcea5d7ae673432aee858fb049e7c79fb77ef68ec051c317e30@ec2-100-25-100-81.compute-1.amazonaws.com:5432/d8dnp6a03lnsma
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default':dj_database_url.parse(os.environ.get(postgres://eoxlgjvactvfbg:35cc731edf5d2dcea5d7ae673432aee858fb049e7c79fb77ef68ec051c317e30@ec2-100-25-100-81.compute-1.amazonaws.com:5432/d8dnp6a03lnsma
+#     ))
+# }
 
 
 # Password validation
@@ -129,5 +131,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES = [os.path.join(BASE_DIR, 'static')]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
+
+# Stripe
+STRIPE_CURRENCY = 'usd'
+STRIPE_PUBLISHABLE_KEY = os.getenv('STRIPE_PUBLISHABLE_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')

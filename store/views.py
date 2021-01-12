@@ -1,3 +1,5 @@
+import stripe
+from django.conf import settings
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Category, Product, Cart, CartItem
 from django.core.exceptions import ObjectDoesNotExist
@@ -39,7 +41,7 @@ def add_cart(request, product_id):
     except Cart.DoesNotExist:
         cart = Cart.objects.create(
             cart_id=_cart_id(request)
-            )
+        )
         cart.save()
     try:
         cart_item = CartItem.objects.get(product=product, cart=cart)
@@ -48,10 +50,10 @@ def add_cart(request, product_id):
         cart_item.save()
     except CartItem.DoesNotExist:
         cart_item = CartItem.objects.create(
-                product=product,
-                quantity=1,
-                cart=cart
-            )
+            product=product,
+            quantity=1,
+            cart=cart
+        )
         cart_item.save()
 
     return redirect('cart_detail')
@@ -66,6 +68,29 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
             counter += cart_item.quantity
     except ObjectDoesNotExist:
         pass
+    stripe.api_key = settings.STRIPE_SECRET_KEY
+    stripe_total = int(total * 100)
+    description = 'Please fill in your personal info'
+    data_key = settings.STRIPE_PUBLISHABLE_KEY
+    if request.method == 'POST':
+        try:
+            token = request.POST['stripeToken']
+            email = request.POST['stripeEmail']
+            customer = stripe.Customer.create(
+                email=email,
+                source=token
+            )
+            charge = stripe.Charge.create(
+                amount=stripe_total,
+                currency='usd',
+                description=description,
+                customer=customer.id
+            )
+        except stripe.error.CardError as e:
+            return False, e
 
-    return render(request, 'store/cart.html', dict(cart_items=cart_items, total=total, counter=counter))
+    return render(request, 'store/cart.html', dict(
+        cart_items=cart_items, total=total,
+        counter=counter, data_key=data_key,
+        stripe_total=stripe_total, description=description))
 
