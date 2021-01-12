@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300&display=swap');
+
 body {
     /* background-color: #f8f0ff;  */
+    font-family: "Quicksand", sans-serif;
 }
 
 .try {
@@ -7,13 +10,21 @@ body {
     padding-top: 5px;
 }
 
+.navbar {
+    background-color: #f8f0ff !important;
+}
+
 /* -------- NAV -------- */
 .navbar-brand {
     text-align: center;
+    font-size: 40px;
+    font-family: "Great Vibes", fantasy;
+    margin-left: 20px;
+    color: black;
 }
 
 .navbar li a {
-    color: #f8f0ff;
+    color: black;
 }
 
 /* -------- DROPDOWN MENU ---------*/
@@ -150,14 +161,20 @@ footer {
    bottom: 0;
    width: 100%;
    height: 100%;
-   background-color: black;
-   color: white;
+   background-color: #f8f0ff;
+   color: black;
    text-align: center;
 }
 
 .copyright {
     text-align: left;
     /* padding-top: 5%; */
+}
+
+.beauty-bounty-text {
+    font-family: "Great Vibes", fantasy;
+    font-size: 30px;
+    color: #f8f0ff;
 }
 
 .about-footer-text,
@@ -200,6 +217,5 @@ footer {
 
 .socials li a i:hover{
     color: #d6a9fc;
-  
 }
 
