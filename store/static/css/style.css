@@ -10,16 +10,21 @@ body {
     padding-top: 5px;
 }
 
+.vasilia {
+    margin-left: 300px;
+    display: flex;
+}
+
+/* -------- NAV -------- */
 .navbar {
     background-color: #f8f0ff !important;
 }
 
-/* -------- NAV -------- */
 .navbar-brand {
     text-align: center;
     font-size: 40px;
     font-family: "Great Vibes", fantasy;
-    margin-left: 20px;
+    margin-left: 30px;
     color: #391066;
 }
 
@@ -168,17 +173,18 @@ footer {
    background-color: #f8f0ff;
    color: black;
    text-align: center;
+   padding-top: 35px;
 }
 
 .copyright {
     text-align: left;
-    /* padding-top: 5%; */
+    float: right;
 }
 
 .beauty-bounty-text {
-    font-family: "Great Vibes", fantasy;
+    font-family: "Great Vibes", sans-serif;
     font-size: 30px;
-    color: #f8f0ff;
+    color: #391066;
 }
 
 .about-footer-text,
@@ -190,7 +196,7 @@ footer {
 }
 
 .connect-footer-text {
-    text-align: right;
+    
     text-transform: uppercase;
     letter-spacing: 7px;
     padding-top: 5px;
@@ -213,8 +219,8 @@ footer {
 }
 
 .socials li a i {
-    margin-left: 30px;
-    /* padding-top: 10px; */
+    margin-left: 60px;
+    padding-top: 10px;
     font-size: 30px;
     color: #391066;
     text-shadow: 0px 0px 1px #9e62d9;
