@@ -28,6 +28,11 @@ body {
     color: #391066;
 }
 
+.navbar-brand:hover {
+    color: #391066;
+    text-shadow: 0px 1px 0px #b0acab;
+}
+
 .navbar li a {
     color: black;
 }
@@ -184,7 +189,13 @@ footer {
 .beauty-bounty-text {
     font-family: "Great Vibes", sans-serif;
     font-size: 30px;
+    text-decoration: none;
     color: #391066;
+}
+
+.beauty-bounty-text:hover {
+    color: #602997;
+    text-shadow: 0px 1px 0px #b0acab;
 }
 
 .about-footer-text,
@@ -207,13 +218,13 @@ footer {
 
 .contact-by-email {
     text-decoration: none;
-    color: #360f63;
-    text-shadow: 0px 1px 1px #fff;
+    color: #391066;
+    text-shadow: 0px 0px 1px #28063b;
 }
 
 .contact-by-email:hover{
     color: #511694;
-    text-shadow: 0px 0px 1px #8957c2;
+    text-shadow: 0px 0px 1px #9e62d9;
 
 }
 
@@ -230,6 +241,7 @@ footer {
 }
 
 .socials li a i:hover{
-    color: #9e62d9;
+    color: #541e73;
+    text-shadow: 0px 0px 2px #982bd6;
 }
 

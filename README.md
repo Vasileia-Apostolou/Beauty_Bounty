@@ -3,6 +3,8 @@
 ## Resolved
 * -icons floating
 * SECRET KEY EXPOSED! 
+* POSTGRES URI Exposed, destroyed database
+
 
 
 
