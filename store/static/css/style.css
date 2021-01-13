@@ -173,11 +173,11 @@ footer {
    background-color: #f8f0ff;
    color: black;
    text-align: center;
-   padding-top: 35px;
+   padding-top: 50px;
 }
 
 .copyright {
-    text-align: left;
+    margin-right: 45px;
     float: right;
 }
 
@@ -188,11 +188,14 @@ footer {
 }
 
 .about-footer-text,
-.shopping-cart-text,
-.contact-footer-text {
+.contact-footer-text,
+.connect-footer-text {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 7px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    text-shadow: 0px 0px 5px white;
 }
 
 .connect-footer-text {
@@ -220,7 +223,6 @@ footer {
 
 .socials li a i {
     margin-left: 60px;
-    padding-top: 10px;
     font-size: 30px;
     color: #391066;
     text-shadow: 0px 0px 1px #9e62d9;

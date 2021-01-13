@@ -1,7 +1,8 @@
 ### Testing
 
-## Resolved Bugs
+## Resolved
 * -icons floating
+* SECRET KEY EXPOSED! 
 
 
 
@@ -19,3 +20,5 @@
 
 ## Acknowledgements
 * Tutor Assistance
+* Mentor
+* Slack Overflow
