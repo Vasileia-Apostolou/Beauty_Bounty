@@ -1,3 +1,42 @@
+# [Beauty Bounty]() - Milestone Project : Full Stack with Django - Code Institute
+
+## Table Of Content
+
+- [**About**](#About)
+  - [**Why This Project**](#Why-This-Project)
+- [**UX**](#UX)
+  - [**User Stories**](#User-Stories)
+  - [**Research**](#Research)
+  - [**Wireframes**](#Wireframes)
+  - [**Design**](#Design)
+- [**Features**](#Features)
+  - [**Functionality**](#Functionality)
+  - [**Existing Feautures**](#Existing-Features)
+  - [**Features Left To Implement**](#Features-Left-To-Implement)
+- [**Technologies Used**](#Technologies-Used)
+  - [**Languages**](#Languages)
+  - [**Tools**](#Tools)
+  - [**Libraries**](#Libraries)
+  - [**Frameworks**](#Frameworks)
+  - [**Database**](#Database)
+  - [**Hosting**](#Hosting)
+- [**Testing**](#Testing)
+  - [**Browsers**](#Browsers)
+  - [**Devices**](#Devices)
+  - [**Testing User Stories**](#Testing-User-Stories)
+  - [**Manual Testing**](#Manual-Testing)
+  - [**Unresolved Bugs**](#Unresolved-Bugs)
+  - [**Code Validation**](#Code-Validation)
+- [**Deployment**](#Deployment)
+  - [**Live App Link**](#Live-App-Link)
+  - [**Repository Link**](#Repository-Link)
+  - [**Running Code Locally**](#Running-Code-Locally)
+- [**Credits**](#Credits)
+  - [**Content**](#Content)
+  - [**Acknowledgements**](#Acknowledgements)
+  - [**Media**](#Media)
+  - [**Disclaimer**](#Disclaimer)
+
 ### Testing
 
 ## Resolved

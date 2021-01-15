@@ -137,5 +137,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 
 # Stripe
 STRIPE_CURRENCY = 'usd'
-STRIPE_PUBLISHABLE = os.environ.get('STRIPE_PUBLISHABLE')
-STRIPE_SECRET = os.environ.get('STRIPE_SECRET')
+STRIPE_PUBLISHABLE = os.environ.get('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET = os.environ.get('STRIPE_SECRET_KEY')

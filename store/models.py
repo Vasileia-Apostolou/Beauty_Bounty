@@ -100,7 +100,8 @@ class Meta:
 class OrderItem(models.Model):
     product = models.CharField(max_length=300)
     quantity = models.IntegerField()
-    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Price')
+    price = models.DecimalField(
+        max_digits=10, decimal_places=2, verbose_name='Price')
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
 
     class Meta:

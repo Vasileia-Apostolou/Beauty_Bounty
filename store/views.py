@@ -59,7 +59,7 @@ def add_cart(request, product_id):
     return redirect('cart_detail')
 
 
-def cart_detail(request, total=0, counter=0, cart_items=None):
+def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
     try:
         cart = Cart.objects.get(cart_id=_cart_id(request))
         cart_items = CartItem.objects.filter(cart=cart, active=True)
@@ -77,15 +77,15 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
             token = request.POST['stripeToken']
             email = request.POST['stripeEmail']
             billingName = request.POST['stripeBillingName']
-            billingAddress = request.POST.get('stripeBillingAddress', False)
-            billingCountry = request.POST.get('stripeBillingCounty', False)
-            billingCity = request.POST.get('stripeBillingCity', False)
-            billingPostcode = request.POST.get('stripeBillingPostcode', False)
+            billingAddress1 = request.POST.get('stripeBillingAddressLine1', False)
+            billingCountry = request.POST.get('stripeBillingAddressCountyCode', False)
+            billingCity = request.POST.get('stripeBillingAddressCity', False)
+            billingPostcode = request.POST.get('stripeBillingAddressZip', False)
             shippingName = request.POST['stripeShippingName']
-            shippingAddress = request.POST.get('stripeShippingAddress', False)
-            shippingCountry = request.POST.get('stripeShippingCountry', False)
-            shippingCity = request.POST.get('stripeShippingCity', False)
-            shippingPostcode = request.POST.get('stripeShippingPostcode', False)
+            shippingAddress1 = request.POST.get('stripeShippingAddressLine1', False)
+            shippingCountry = request.POST.get('stripeShippingAddressCountryCode', False)
+            shippingCity = request.POST.get('stripeShippingAddressCity', False)
+            shippingPostcode = request.POST.get('stripeShippingAddressZip', False)
             customer = stripe.Customer.create(
                 email=email,
                 source=token
@@ -96,19 +96,19 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
                 description=description,
                 customer=customer.id
             )
-
-            try: 
+            # Order
+            try:
                 order_details = Order.objects.create(
                     token=token,
                     total=total,
                     emailAddress=email,
                     billingName=billingName,
-                    billingAddress=billingAddress,
+                    billingAddress1=billingAddress1,
                     billingCountry=billingCountry,
                     billingCity=billingCity,
                     billingPostcode=billingPostcode,
                     shippingName=shippingName,
-                    shippingAddress=shippingAddress,
+                    shippingAddress1=shippingAddress1,
                     shippingCountry=shippingCountry,
                     shippingCity=shippingCity,
                     shippingPostcode=shippingPostcode
@@ -125,7 +125,8 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
 
                     # reducing the stock
                     products = Product.objects.get(id=order_item.product.id)
-                    products.stock = int(order_item.product.stock - order_item.quantity)
+                    products.stock = int(
+                        order_item.product.stock - order_item.quantity)
                     products.save()
                     order_item.delete()
 
