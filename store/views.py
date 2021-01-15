@@ -1,8 +1,8 @@
-import stripe
-from django.conf import settings
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Category, Product, Cart, CartItem
 from django.core.exceptions import ObjectDoesNotExist
+import stripe
+from django.conf import settings
 
 
 def home(request, category_slug=None):
@@ -76,6 +76,16 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
         try:
             token = request.POST['stripeToken']
             email = request.POST['stripeEmail']
+            billingName = request.POST['stripeBillingName']
+            billingAddress = request.POST['stripeBillingAddress']
+            billingCountry = request.POST['stripeBillingCountry']
+            billingCity = request.POST['stripeBillingCity']
+            billingPostcode = request.POST['stripeBillingPostcode']
+            shippingName = request.POST['stripeShippingName']
+            shippingAddress = request.POST['stripeShippingAddress']
+            shippingCountry = request.POST['stripeShippingCountry']
+            shippingCity = request.POST['stripeShippingCity']
+            shippingPostcode = request.POST['stripeShippingPostcode']
             customer = stripe.Customer.create(
                 email=email,
                 source=token
@@ -86,6 +96,35 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
                 description=description,
                 customer=customer.id
             )
+
+            try: 
+                order_details = Order.objects.create(
+                    token=token,
+                    total=total,
+                    emailAddress=email,
+                    billingName=billingName,
+                    billingAddress=billingAddress,
+                    billingCountry=billingCountry,
+                    billingCity=billingCity,
+                    billingPostcode=billingPostcode,
+                    shippingName=shippingName,
+                    shippingAddress=shippingAddress,
+                    shippingCountry=shippingCountry,
+                    shippingCity=shippingCity,
+                    shippingPostcode=shippingPostcode
+                )
+                order_details.save()
+                for order_item in cart_items:
+                    or_item = OrderItem.objects.create(
+                        product=order_item.product.name,
+                        quantity=order_item.quantity,
+                        price=order_item.product.price,
+                        order=order_details
+                    )
+                    or_item.save()
+
+                    #reducing the stock
+                    products = 
         except stripe.error.CardError as e:
             return False, e
 
