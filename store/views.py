@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Category, Product, Cart, CartItem
+from .models import Category, Product, Cart, CartItem, Order, OrderItem
 from django.core.exceptions import ObjectDoesNotExist
 import stripe
 from django.conf import settings
@@ -77,15 +77,15 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
             token = request.POST['stripeToken']
             email = request.POST['stripeEmail']
             billingName = request.POST['stripeBillingName']
-            billingAddress = request.POST['stripeBillingAddress']
-            billingCountry = request.POST['stripeBillingCountry']
-            billingCity = request.POST['stripeBillingCity']
-            billingPostcode = request.POST['stripeBillingPostcode']
+            billingAddress = request.POST.get('stripeBillingAddress', False)
+            billingCountry = request.POST.get('stripeBillingCounty', False)
+            billingCity = request.POST.get('stripeBillingCity', False)
+            billingPostcode = request.POST.get('stripeBillingPostcode', False)
             shippingName = request.POST['stripeShippingName']
-            shippingAddress = request.POST['stripeShippingAddress']
-            shippingCountry = request.POST['stripeShippingCountry']
-            shippingCity = request.POST['stripeShippingCity']
-            shippingPostcode = request.POST['stripeShippingPostcode']
+            shippingAddress = request.POST.get('stripeShippingAddress', False)
+            shippingCountry = request.POST.get('stripeShippingCountry', False)
+            shippingCity = request.POST.get('stripeShippingCity', False)
+            shippingPostcode = request.POST.get('stripeShippingPostcode', False)
             customer = stripe.Customer.create(
                 email=email,
                 source=token
@@ -123,8 +123,18 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
                     )
                     or_item.save()
 
-                    #reducing the stock
-                    products = 
+                    # reducing the stock
+                    products = Product.objects.get(id=order_item.product.id)
+                    products.stock = int(order_item.product.stock - order_item.quantity)
+                    products.save()
+                    order_item.delete()
+
+                    # print statement
+                    print('Your order has been completed')
+                return redirect('home')
+            except ObjectDoesNotExist:
+                pass
+
         except stripe.error.CardError as e:
             return False, e
 
