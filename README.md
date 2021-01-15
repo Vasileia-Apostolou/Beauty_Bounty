@@ -86,6 +86,9 @@ I wanted to keep my website clean and bright. I used a lavender color for the na
 ### Functionality
 The app is using Python login to allow users to register or login/logout to their account for free. Users are also able to add item(s) to the cart and use their credit card to make a payment. That was achieved by installing and setting up Stripe. 
 
+### Existing Features
+- **Navbar** -
+The navbar includes 5 links(categories) such as All Products, Brands, New, Best Sellers and Fragrances. Additionally it includes a user icon which will redirect user to a Register/Login page, a search icon which gives users the ability to search a specific product and a cart icon which redirects users to the checkout page.
 
 ### Testing
 
