@@ -38,7 +38,12 @@
   - [**Disclaimer**](#Disclaimer)
 
 ## About 
-This is an e-commerce store created for my 4th Milestone Project with Code Institute. I used mainly Python with Django framework. My e-commerce store sells only the beauty products of the season from makeup, skincare and even fragrances. It's the place where beauty lovers visit to get inspired and purchase the hottest products out there, to make them look and feel their best! 
+My e-commerce store sells only the beauty products of the season from makeup, skincare and even fragrances. It's the place where beauty lovers visit to get inspired and purchase the hottest products out there, to make them look and feel their best! 
+
+## Why This Project? 
+This is an e-commerce store created for my 4th Milestone Project - Full Stack with Django for [Code Institute](https://codeinstitute.net/). My app allows users to search, view and purchase beauty products.
+
+The front-end display and functionality uses HTML, CSS, JavaScript and the back-end functionality uses Python, Django and PostgresSQL.
 
 ### Testing
 
