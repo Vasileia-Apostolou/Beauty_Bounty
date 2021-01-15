@@ -69,6 +69,21 @@ As a user, I want to be able to:
 ### Research
 I researched tutorial on e-commerse stores with Python and Django on [YouTube](https://www.youtube.com/) and [Udemy](https://www.udemy.com/), to get a general idea of the functionality that was needed to be implemented for this project. Most of my code was taken from Udemy's E-commerce Website Project.
 
+### Wireframes
+To create this project's wireframes I used [Balsamiq](https://balsamiq.com/).
+
+During the development process some changes were made.
+
+*
+*
+*
+
+### Design
+I wanted to keep my website clean and bright. I used a lavender color for the navbar and footer to add some character but kept everything else white. Navbar brand and icons were given a deep almost black-looking purple. Typography is "Great Vibes" for the navbar brand and "Quicksand" for the body html code.
+
+## Features
+
+### Functionality
 
 
 ### Testing
