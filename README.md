@@ -66,6 +66,9 @@ As a user, I want to be able to:
 * Contact costumer service via email or call
 * Connect with the people of Beauty Bounty through social media 
 
+### Research
+I researched tutorial on e-commerse stores with Python and Django on [YouTube](https://www.youtube.com/) and [Udemy](https://www.udemy.com/), to get a general idea of the functionality that was needed to be implemented for this project. Most of my code was taken from Udemy's E-commerce Website Project.
+
 
 
 ### Testing
