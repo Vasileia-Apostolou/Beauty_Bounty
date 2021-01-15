@@ -90,6 +90,8 @@ The app is using Python login to allow users to register or login/logout to thei
 - **Navbar** -
 The navbar includes 5 links(categories) such as All Products, Brands, New, Best Sellers and Fragrances. Additionally it includes a user icon which will redirect user to a Register/Login page, a search icon which gives users the ability to search a specific product and a cart icon which redirects users to the checkout page.
 
+
+
 ### Testing
 
 ## Resolved
