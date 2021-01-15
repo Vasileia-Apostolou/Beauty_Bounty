@@ -45,6 +45,29 @@ This is an e-commerce store created for my 4th Milestone Project - Full Stack wi
 
 The front-end display and functionality uses HTML, CSS, JavaScript and the back-end functionality uses Python, Django and PostgresSQL.
 
+## UX
+
+### User Stories
+As a user, I want to be able to:
+* Look at all the app's products
+* Search for a specific product
+* Look into different product categories
+* View product information
+* View my cart item(s)
+* Add a product to my cart
+* Increase/Decrease the quantity of the product I am interested in purchasing
+* Delete a product from my cart
+* View order summery and total before proceeding with the payment
+* Purchase the added cart item(s) with my credit card details
+* Get a confirmation when my payment goes through
+* Get a notification if my payment doesn't go through
+* Create my personal account
+* Login/Logout of my personal account
+* Contact costumer service via email or call
+* Connect with the people of Beauty Bounty through social media 
+
+
+
 ### Testing
 
 ## Resolved
