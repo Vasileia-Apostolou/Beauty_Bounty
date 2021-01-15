@@ -84,6 +84,7 @@ I wanted to keep my website clean and bright. I used a lavender color for the na
 ## Features
 
 ### Functionality
+The app is using Python login to allow users to register or login/logout to their account for free. Users are also able to add item(s) to the cart and use their credit card to make a payment. That was achieved by installing and setting up Stripe. 
 
 
 ### Testing
