@@ -7,6 +7,7 @@ from django.contrib.auth.models import Group, User
 from .forms import RegistrationForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.decorators import login_required
 
 
 def home(request, category_slug=None):
@@ -190,3 +191,13 @@ def loginView(request):
 def logoutView(request):
     logout(request)
     return redirect('login')
+
+
+@login_required(redirect_field_name='next', login_url='login')
+def customerHistory(request):
+    if request.user.is_authenticated:
+        email = str(request.user.email)
+        order_details = Order.objects.filter(emailAddress=email)
+    return render(request, 'store/history.html')
+
+

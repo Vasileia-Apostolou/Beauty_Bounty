@@ -10,4 +10,5 @@ urlpatterns = [
     path('account/create/', views.registrationView, name='register'),
     path('account/login/', views.loginView, name='login'),
     path('account/logout/', views.logoutView, name='logout'),
+    path('history/', views.customerHistory, name='history'),
 ]
