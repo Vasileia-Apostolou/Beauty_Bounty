@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300&display=swap');
 
 body {
-    /* background-color: #f8f0ff;  */
     font-family: "Quicksand", sans-serif;
 }
 
@@ -14,10 +13,6 @@ body {
     display: flex;
 }
 
-.errorlist li {
-    color: blue;
-    font-weight: bold;
-}
 /* -------- NAV -------- */
 .navbar {
     background-color: #f8f0ff !important;
@@ -74,6 +69,49 @@ body {
     display: block;
 }
 
+/* -------- BUTTONS ---------*/ 
+.registration-button {
+    background-color: black;
+    color: white;
+    margin-left: 40%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.registration-button:hover {
+    color: white;
+}
+
+.continue-shopping-button {
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    margin-left: 40%;
+}
+
+.continue-shopping-button:hover {
+    color: white;
+}
+
+.go-back-button {
+    background-color: black;
+    color: white;
+    float: right;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+
+.stripe-button {
+    background-color: blueviolet;
+
+}
+
+.add-to-card-button {
+    margin-left: 40%;
+    background-color: black;
+    color: white !important;
+}
+
 /* --------- PRODUCTS --------- */
 .product-name {
     text-align: center;
@@ -110,12 +148,6 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
-}
-
-.add-to-card-button {
-    margin-left: 40%;
-    background-color: black;
-    color: white !important;
 }
 
 .product-image {
@@ -159,9 +191,9 @@ background-size: cover;
     letter-spacing: 2px;
 }
 
-.go-back-href {
+/* .go-back-href {
    text-align: center;
-}
+} */
 
 .here-text {
     text-decoration: none;
@@ -174,20 +206,12 @@ background-size: cover;
     font-size: 18px;
 }
 
-.go-back-button {
-    background-color: black;
-    color: white;
-    float: right;
-    margin-right: 20%;
-    margin-top: 5%;
-}
-
-.stripe-button {
-    background-color: blueviolet;
-
-}
-
 /* ------- REGISTRATION FORM ---------*/
+.errorlist li {
+    color: blue;
+    font-weight: bold;
+} 
+
 .new-account-text {
     text-align: center;
     text-transform: uppercase;
@@ -197,18 +221,10 @@ background-size: cover;
     padding-bottom: 5%;
 }
 
-.registration-button {
-    background-color: black;
-    color: white;
-    margin-left: 40%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+.success-message {
+    text-align: center;
+    text-transform: capitalize;
 }
-
-.registration-button:hover {
-    color: white;
-}
-
 
 /* -------- FOOTER --------*/
 footer {
