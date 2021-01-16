@@ -82,11 +82,12 @@ class Order(models.Model):
     billingAddress = models.CharField(max_length=300, blank=True)
     billingCountry = models.CharField(max_length=300, blank=True)
     billingCity = models.CharField(max_length=300, blank=True)
-    billingPostcode = models.CharField(max_length=300, blank=True)
+    billingZip = models.CharField(max_length=300, blank=True)
     shippingName = models.CharField(max_length=300, blank=True)
+    shippingAddress = models.CharField(max_length=300, blank=True)
     shippingCounty = models.CharField(max_length=300, blank=True)
     shippingCity = models.CharField(max_length=300, blank=True)
-    shippingPostcode = models.CharField(max_length=300, blank=True)
+    shippingZip = models.CharField(max_length=300, blank=True)
 
 
 class Meta:
@@ -108,7 +109,7 @@ class OrderItem(models.Model):
         db_table = 'OrderItem'
 
     def total(self):
-        return self.quantity * self._price
+        return self.quantity * self.price
     
     def __str__(self):
         return self.product

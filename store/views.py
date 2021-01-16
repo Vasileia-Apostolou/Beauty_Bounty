@@ -3,6 +3,8 @@ from .models import Category, Product, Cart, CartItem, Order, OrderItem
 from django.core.exceptions import ObjectDoesNotExist
 import stripe
 from django.conf import settings
+from django.contrib.auth.models import Group, User
+from .forms import RegistrationForm
 
 
 def home(request, category_slug=None):
@@ -69,7 +71,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
     except ObjectDoesNotExist:
         pass
     stripe.api_key = settings.STRIPE_SECRET_KEY
-    stripe_total = int(total * 100)
+    order_total = int(total * 100)
     description = 'Please fill in your personal info'
     data_key = settings.STRIPE_PUBLISHABLE_KEY
     if request.method == 'POST':
@@ -78,27 +80,26 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
             email = request.POST['stripeEmail']
             billingName = request.POST['stripeBillingName']
             billingAddress = request.POST.get('stripeBillingAddress', False)
-            billingCountry = request.POST.get('stripeBillingAddressCountyCode', False)
-            billingCity = request.POST.get('stripeBillingAddressCity', False)
-            billingPostcode = request.POST.get('stripeBillingAddressZip', False)
+            billingCountry = request.POST.get('stripeBillingCounty', False)
+            billingCity = request.POST.get('stripeBillingCity', False)
+            billingZip = request.POST.get('stripeBillingZip', False)
             shippingName = request.POST['stripeShippingName']
             shippingAddress = request.POST.get('stripeShippingAddress', False)
-            shippingCountry = request.POST.get('stripeShippingAddressCountryCode', False)
+            shippingCountry = request.POST.get('stripeShippingCountry', False)
             shippingCity = request.POST.get('stripeShippingAddressCity', False)
-            shippingPostcode = request.POST.get('stripeShippingAddressZip', False)
+            shippingZip = request.POST.get('stripeShippingZip', False)
             customer = stripe.Customer.create(
-                email=email,
-                source=token
+                email=email
             )
             charge = stripe.Charge.create(
-                amount=stripe_total,
+                amount=order_total,
                 currency='usd',
                 description=description,
                 customer=customer.id
             )
             # Order
             try:
-                order_details = Order.objects.create(
+                order_details = Order.objectscreate(
                     token=token,
                     total=total,
                     emailAddress=email,
@@ -106,12 +107,12 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
                     billingAddress=billingAddress,
                     billingCountry=billingCountry,
                     billingCity=billingCity,
-                    billingPostcode=billingPostcode,
+                    billingZip=billingZip,
                     shippingName=shippingName,
                     shippingAddress=shippingAddress,
                     shippingCountry=shippingCountry,
                     shippingCity=shippingCity,
-                    shippingPostcode=shippingPostcode
+                    shippingZip=shippingZip
                 )
                 order_details.save()
                 for order_item in cart_items:
@@ -132,7 +133,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
 
                     # print statement
                     print('Your order has been completed')
-                return redirect('home')
+                return render(request, 'store/home_page.html')
             except ObjectDoesNotExist:
                 pass
 
@@ -142,5 +143,26 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
     return render(request, 'store/cart.html', dict(
         cart_items=cart_items, total=total,
         counter=counter, data_key=data_key,
-        stripe_total=stripe_total, description=description))
+        order_total=order_total, description=description))
 
+
+# def cart_remove_product(request, product_id):
+#     cart = Cart.objects.get(cart_id=_cart_id(request))
+#     product = get_object_or_404(Product, id=product_id)
+#     cart_item = CartItem.objects.get(product=product, cart=cart)
+#     cart.item.delete()
+#     return redirect('card_detail')
+
+
+def registrationView(request):
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            registration_user = User.objects.get(username=username)
+            user_group = Group.objects.get(name='Customer')
+            user_group.user_set.add(registration_user)
+    else:
+        form = RegistrationForm()
+    return render(request, 'store/register.html', {'form': form})

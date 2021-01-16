@@ -96,7 +96,7 @@ The navbar includes 5 links(categories) such as All Products, Brands, New, Best 
 
 ## Resolved
 * -icons floating
-* SECRET KEY EXPOSED! 
+* SECRET KEY EXPOSED! x2
 * POSTGRES URI Exposed, destroyed database
 
 

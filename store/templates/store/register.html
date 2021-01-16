@@ -1,0 +1,33 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block title %} 
+Create a New Account
+{% endblock %}
+
+{% block content %}
+
+<div>
+    {% if not form.is_valid %}
+    <div class="mx-auto">
+        <br><br><br><br>
+        <div class="col-9 col-sm-9 col-md-6 col-lg- mx-auto">
+            <br>
+            <p class="new-account-text">Create A New Account</p>
+            <form action="post">
+                {% csrf_token %}
+                <p>{{ form }}</p>
+                <button type="submit" name="button" class="btn registration-button hvr-float-shadow">Submit</button>
+            </form>
+        </div>
+    </div>
+    {% else %}
+    <div class="mx-auto">
+        <br>
+        <h2 class="success-message">Account successfully created!</h2>
+        <br>
+        <a href="{% url 'home' %}">Go Back</a>
+    </div>
+    {% endif %}
+</div>
+<br>
+{% endblock %}
