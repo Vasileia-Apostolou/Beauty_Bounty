@@ -106,11 +106,21 @@ body {
 
 }
 
-.add-to-card-button {
+.add-to-card-button,
+.new-account-button {
     margin-left: 40%;
     background-color: black;
     color: white !important;
 }
+
+.login-button {
+    margin-left: 45%;
+    margin-top: 5%;
+    background-color: black;
+    color: white !important;
+}
+
+
 
 /* --------- PRODUCTS --------- */
 .product-name {
@@ -224,6 +234,16 @@ background-size: cover;
 .success-message {
     text-align: center;
     text-transform: capitalize;
+}
+
+/* -------- LOGIN FORM --------*/
+.existing-customers-text {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.text-center {
+    margin-top: 7%;
 }
 
 /* -------- FOOTER --------*/

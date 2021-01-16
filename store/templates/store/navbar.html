@@ -34,8 +34,18 @@
                     </div>
                 </li>
                 <div class="vasilia">
-                <li class="nav-item dropdown"><a class="nav-link px-3 hvr-bounce-in" href="" data-toggle="dropdown"><i class="fas fa-user navbar-icons"></i></a>
+                    {% if request.user.is_authenticated and request.user.first_name %}
+                <li class="nav-item"><span class="nav-link px-3 hvr-bounce-in"><i class="fas fa-user navbar-icons"></i>Welcome, {{ request.user.first_name }} </span>
                 </li>
+                <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="{% url 'logout' %}"><i class="fas fa-user navbar-icons"></i>Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="">Logout</a>
+                </li>
+                <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="{% url 'login' %}"><i class="fas fa-user navbar-icons"></i></a>
+                </li>
+                {% endif %}
+
                 <!-- <li class="nav-item"><a class="nav-link px-3" href="" data-toggle="dropdown">Login</a></li>
                 <li class="nav-item"><a class="nav-link px-3" href="" data-toggle="dropdown">Register</a></li> -->
                 <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown"><i

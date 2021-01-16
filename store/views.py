@@ -5,6 +5,8 @@ import stripe
 from django.conf import settings
 from django.contrib.auth.models import Group, User
 from .forms import RegistrationForm
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import login, authenticate, logout
 
 
 def home(request, category_slug=None):
@@ -166,3 +168,25 @@ def registrationView(request):
     else:
         form = RegistrationForm()
     return render(request, 'store/register.html', {'form': form})
+
+
+def loginView(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            username = request.POST['username']
+            password = request.POST['password']
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('home')
+            else:
+                return redirect('register')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'store/login.html', {'form': form})
+
+
+def logoutView(request):
+    logout(request)
+    return redirect('login')
