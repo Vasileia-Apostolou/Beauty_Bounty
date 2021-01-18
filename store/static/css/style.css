@@ -205,9 +205,9 @@ background-size: cover;
     letter-spacing: 2px;
 }
 
-/* .go-back-href {
-   text-align: center;
-} */
+.click-here-text {
+    text-align: center;
+}
 
 .here-text {
     text-decoration: none;

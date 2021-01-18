@@ -127,7 +127,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
                         order=order_details
                     )
                     or_item.save()
-
+                
                     # reducing the stock
                     products = Product.objects.get(id=order_item.product.id)
                     products.stock = int(

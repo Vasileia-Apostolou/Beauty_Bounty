@@ -29,19 +29,15 @@
                 </li>
                 <div class="vasilia">
                     {% if request.user.is_authenticated and request.user.first_name %}
-                <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="{% url 'history' %}"><i class="fas fa-user navbar-icons"></i>{{ request.user.first_name }}</a>
+                <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="{% url 'history' %}"><i class="fas fa-user navbar-icons"></i> {{ request.user.first_name }}</a>
                 </li>
-                <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="{% url 'logout' %}"><i class="fas fa-user navbar-icons"></i>Logout</a>
+                <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt navbar-icons"></i> Logout</a>
                 </li>
                 {% else %}
-                <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="">Logout</a>
-                </li>
                 <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="{% url 'login' %}"><i class="fas fa-user navbar-icons"></i></a>
                 </li>
                 {% endif %}
-
-                <!-- <li class="nav-item"><a class="nav-link px-3" href="" data-toggle="dropdown">Login</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="" data-toggle="dropdown">Register</a></li> -->
+                
                 <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown"><i
                             class="fas fa-search search navbar-icons"></i></a>
                     <form class="form-inline dropdown-content dropdown-menu dropdown-search-bar" action="{% url 'search' %}", method="GET">
@@ -53,8 +49,11 @@
                         </div>
                      </form>
                 </li>
+               
                 {% if item_count > 0 %}
                 <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="{% url 'cart_detail' %}" data-toggle="dropdown"><i class="fas fa-shopping-bag navbar-icons"></i> ({{item_count}})</a>
+                {% else %}
+                 <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="{% url 'cart_detail' %}" data-toggle="dropdown"><i class="fas fa-shopping-bag navbar-icons"></i></a>
                 {% endif %}
                 </li>
                 </div>
