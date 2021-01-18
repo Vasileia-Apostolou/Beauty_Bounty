@@ -90,7 +90,7 @@ class Order(models.Model):
     billingZip = models.CharField(max_length=300, blank=True)
     shippingName = models.CharField(max_length=300, blank=True)
     shippingAddress = models.CharField(max_length=300, blank=True)
-    shippingCounty = models.CharField(max_length=300, blank=True)
+    shippingCountry = models.CharField(max_length=300, blank=True)
     shippingCity = models.CharField(max_length=300, blank=True)
     shippingZip = models.CharField(max_length=300, blank=True)
 

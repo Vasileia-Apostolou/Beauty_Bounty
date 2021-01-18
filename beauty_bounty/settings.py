@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', 'zu7wp^sp5%%skb+(l)^cj#z$#w##5j%8156k-kjyhc=ut4-3c=')
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -140,6 +140,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 STRIPE_CURRENCY = 'usd'
 # STRIPE_PUBLISHABLE = os.environ.get('STRIPE_PUBLISHABLE_KEY')
 # STRIPE_SECRET = os.environ.get('STRIPE_SECRET_KEY')
-
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
