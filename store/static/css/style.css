@@ -9,10 +9,6 @@ body {
     padding-top: 5px;
 }
 
-.vasilia {
-    display: flex;
-}
-
 /* -------- NAV -------- */
 .navbar {
     background-color: #f8f0ff !important;
@@ -36,6 +32,7 @@ body {
 }
 
 .navbar-icons {
+    display: flex;
     color: #391066 !important;
 }
 
@@ -78,10 +75,6 @@ body {
     margin-bottom: 5%;
 }
 
-.registration-button:hover {
-    color: white;
-}
-
 .continue-shopping-button {
     background-color: black;
     text-decoration: none;
@@ -89,21 +82,16 @@ body {
     margin-left: 40%;
 }
 
-.continue-shopping-button:hover {
-    color: white;
-}
-
 .go-back-button {
     background-color: black;
     color: white;
     float: right;
     margin-right: 20%;
-    margin-top: 5%;
+    margin-bottom: 10%;
 }
 
 .stripe-button {
     background-color: blueviolet;
-
 }
 
 .add-to-card-button,
@@ -123,6 +111,16 @@ body {
 .go-back-button-2 {
     background-color: black;
     color: white !important;
+}
+
+.continue-shopping-button:hover,
+.go-back-button:hover,
+.registration-button:hover {
+    color: white;
+}
+
+.pay-with-card-button {
+    
 }
 
 
