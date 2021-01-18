@@ -92,7 +92,8 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
             shippingCity = request.POST.get('stripeShippingAddressCity', False)
             shippingZip = request.POST.get('stripeShippingZip', False)
             customer = stripe.Customer.create(
-                email=email
+                email=email,
+                source=token
             )
             charge = stripe.Charge.create(
                 amount=order_total,
@@ -198,6 +199,7 @@ def customerHistory(request):
     if request.user.is_authenticated:
         email = str(request.user.email)
         order_details = Order.objects.filter(emailAddress=email)
-    return render(request, 'store/history.html')
+    return render(request, 'store/history.html', {
+        'order_details': order_details})
 
 
