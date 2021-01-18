@@ -103,7 +103,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
             )
             # Order
             try:
-                order_details = Order.objectscreate(
+                order_details = Order.objects.create(
                     token=token,
                     total=total,
                     emailAddress=email,
@@ -201,5 +201,10 @@ def customerHistory(request):
         order_details = Order.objects.filter(emailAddress=email)
     return render(request, 'store/history.html', {
         'order_details': order_details})
+
+
+def search(request):
+    products = Product.objects.filter(name__contains=request.GET['product'])
+    return render(request, 'store/home_page.html', {'products': products})
 
 

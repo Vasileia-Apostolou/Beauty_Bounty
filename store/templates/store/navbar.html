@@ -44,9 +44,9 @@
                 <li class="nav-item"><a class="nav-link px-3" href="" data-toggle="dropdown">Register</a></li> -->
                 <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown"><i
                             class="fas fa-search search navbar-icons"></i></a>
-                    <form class="form-inline dropdown-content dropdown-menu dropdown-search-bar">
+                    <form class="form-inline dropdown-content dropdown-menu dropdown-search-bar" action="{% url 'search' %}", method="GET">
                         <div>
-                            <input type="text" placeholder="Search">
+                            <input type="text" name="product" placeholder="Search">
                             <div>
                                 <button type="submit"><i class="fas fa-search"></i></button>
                             </div>
