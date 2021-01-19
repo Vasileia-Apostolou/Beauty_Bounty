@@ -251,6 +251,23 @@ background-size: cover;
     border-radius: 10%;
 }
 
+/* ------ HISTORY -------- */
+.order-history-text {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5%;
+    text-shadow: 0px 0px 1px #b0acab;
+}
+
+.table-t-head {
+    font-size: 18px;
+    text-shadow: 0px 0px 1px #ba70ff;
+}
+
+
 
 /* ------- REGISTRATION FORM ---------*/
 .errorlist li {

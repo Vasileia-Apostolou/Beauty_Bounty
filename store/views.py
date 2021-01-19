@@ -80,7 +80,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
         pass
     stripe.api_key = settings.STRIPE_SECRET_KEY
     order_total = int(total * 100)
-    description = 'Please fill in your personal info'
+    description = 'Please Fill In Your Personal Info'
     data_key = settings.STRIPE_PUBLISHABLE_KEY
     if request.method == 'POST':
         try:
