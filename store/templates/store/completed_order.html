@@ -6,8 +6,12 @@ Thank you
 
 {% block content %}
   <div>
-      <br><br><br>
-      <h2 class="thank-you-text">Thank you for your order!</h2>
+      <br><br><br><br>
+      <!-- <h2 class="thank-you-text">Thank you for your order!</h2> -->
+      <div class="row">
+        <img src="{% static 'images/thank_you.jpg' %}"  class="thank-you-img"alt="">
+    </div>
+    <br><br>
       <h5 class="order-number-text">Your order number is : <b> {{ order.id }}</b></h5>
       <p class="confirmation-text">An email confirmation has been sent to you along with a tracking number</p>
       <br><br>

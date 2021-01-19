@@ -16,7 +16,7 @@ body {
 
 .navbar-brand {
     text-align: center;
-    font-size: 45px;
+    font-size: 42px;
     font-family: "Great Vibes", fantasy;
     margin-left: 30px;
     color: #391066;
@@ -120,9 +120,7 @@ body {
 }
 
 .pay-with-card-button {
-    
 }
-
 
 /* --------- PRODUCTS --------- */
 .product-name {
@@ -232,6 +230,12 @@ background-size: cover;
 .order-number-text,
 .confirmation-text {
     text-align: center;
+}
+
+.thank-you-img {
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 10%;
 }
 
 
