@@ -66,6 +66,19 @@ body {
     display: block;
 }
 
+/* ------- IMAGES --------*/
+.welcome-img {
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 10%;   
+}
+
+.thank-you-img {
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 10%;
+}
+
 /* -------- BUTTONS ---------*/ 
 .registration-button {
     background-color: black;
@@ -75,11 +88,12 @@ body {
     margin-bottom: 5%;
 }
 
-.continue-shopping-button {
+.start-shopping-button {
     background-color: black;
     text-decoration: none;
     color: white;
-    margin-left: 40%;
+    margin-left: 45%;
+    margin-bottom: 5%;
 }
 
 .go-back-button {
@@ -113,7 +127,7 @@ body {
     color: white !important;
 }
 
-.continue-shopping-button:hover,
+.start-shopping-button:hover,
 .go-back-button:hover,
 .registration-button:hover {
     color: white;
@@ -245,12 +259,6 @@ background-size: cover;
     text-align: center;
 }
 
-.thank-you-img {
-    width: 50%;
-    margin-left: 25%;
-    border-radius: 10%;
-}
-
 /* ------ HISTORY -------- */
 .order-history-text {
     text-align: center;
@@ -267,6 +275,9 @@ background-size: cover;
     text-shadow: 0px 0px 1px #ba70ff;
 }
 
+.status {
+    color: green;
+}
 
 
 /* ------- REGISTRATION FORM ---------*/
@@ -284,9 +295,11 @@ background-size: cover;
     padding-bottom: 5%;
 }
 
-.success-message {
+.welcome-message {
     text-align: center;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 3%;
 }
 
 /* -------- LOGIN FORM --------*/
