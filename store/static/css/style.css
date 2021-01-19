@@ -16,7 +16,7 @@ body {
 
 .navbar-brand {
     text-align: center;
-    font-size: 40px;
+    font-size: 45px;
     font-family: "Great Vibes", fantasy;
     margin-left: 30px;
     color: #391066;
@@ -217,6 +217,23 @@ background-size: cover;
     text-align: center;
     font-size: 18px;
 }
+
+/* ------- COMPLETED ORDER PAGE ---------*/
+.thank-you-text {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 5%;
+    padding-bottom: 4%;
+}
+
+.order-number-text,
+.confirmation-text {
+    text-align: center;
+}
+
 
 /* ------- REGISTRATION FORM ---------*/
 .errorlist li {

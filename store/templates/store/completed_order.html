@@ -1,0 +1,15 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block title %} 
+Thank you
+{% endblock %}
+
+{% block content %}
+  <div>
+      <br><br><br>
+      <h2 class="thank-you-text">Thank you for your order!</h2>
+      <h5 class="order-number-text">Your order number is : <b> {{ order.id }}</b></h5>
+      <p class="confirmation-text">An email confirmation has been sent to you along with a tracking number</p>
+      <br><br>
+  </div>
+{% endblock %}'

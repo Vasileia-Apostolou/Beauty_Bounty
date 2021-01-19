@@ -10,6 +10,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 
 
+# HOME
 def home(request, category_slug=None):
     category_page = None
     products = None
@@ -23,6 +24,7 @@ def home(request, category_slug=None):
         'category': category_page, 'products': products})
 
 
+# PRODUCT
 def product(request, category_slug, product_slug):
     try:
         product = Product.objects.get(
@@ -32,6 +34,7 @@ def product(request, category_slug, product_slug):
     return render(request, 'store/product.html', {'product': product})
 
 
+# CART
 def _cart_id(request):
     cart = request.session.session_key
     if not cart:
@@ -39,6 +42,7 @@ def _cart_id(request):
     return cart
 
 
+# ADD TO CART
 def add_cart(request, product_id):
     product = Product.objects.get(id=product_id)
     try:
@@ -64,6 +68,7 @@ def add_cart(request, product_id):
     return redirect('cart_detail')
 
 
+# CART USER'S INFORMATION
 def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
     try:
         cart = Cart.objects.get(cart_id=_cart_id(request))
@@ -137,7 +142,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
 
                     # print statement
                     print('Your order has been completed')
-                return render(request, 'store/home_page.html')
+                return redirect('completed_order', order_details.id)
             except ObjectDoesNotExist:
                 pass
 
@@ -150,6 +155,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
         order_total=order_total, description=description))
 
 
+# DELETE PRODUCT FROM CART
 # def cart_remove_product(request, product_id):
 #     cart = Cart.objects.get(cart_id=_cart_id(request))
 #     product = get_object_or_404(Product, id=product_id)
@@ -158,6 +164,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
 #     return redirect('card_detail')
 
 
+# REGISTRATION
 def registrationView(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
@@ -172,6 +179,7 @@ def registrationView(request):
     return render(request, 'store/register.html', {'form': form})
 
 
+# LOGIN
 def loginView(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
@@ -189,11 +197,13 @@ def loginView(request):
     return render(request, 'store/login.html', {'form': form})
 
 
+# LOGOUT
 def logoutView(request):
     logout(request)
     return redirect('login')
 
 
+# ORDER HISTORY
 @login_required(redirect_field_name='next', login_url='login')
 def customerHistory(request):
     if request.user.is_authenticated:
@@ -203,8 +213,16 @@ def customerHistory(request):
         'order_details': order_details})
 
 
+# SEARCH PRODUCT
 def search(request):
     products = Product.objects.filter(name__contains=request.GET['product'])
     return render(request, 'store/home_page.html', {'products': products})
+
+
+# COMPLETED ORDER PAGE
+def completed_order(request, order_id):
+    if order_id:
+        order = get_object_or_404(Order, id=order_id)
+    return render(request, 'store/completed_order.html', {'order': order})
 
 
