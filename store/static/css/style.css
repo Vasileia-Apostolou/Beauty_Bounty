@@ -86,8 +86,8 @@ body {
     background-color: black;
     color: white;
     float: right;
-    margin-right: 20%;
-    margin-bottom: 10%;
+    margin-right: 18%;
+    margin-bottom: 20px;
 }
 
 .stripe-button {
@@ -109,7 +109,7 @@ body {
 }
 
 .go-back-button-2 {
-    background-color: black;
+    background-color: black !important;
     color: white !important;
 }
 
@@ -119,8 +119,21 @@ body {
     color: white;
 }
 
-.pay-with-card-button {
+.stripe-button-el {
+    background-color: black !important;
+    color: white !important;
+    margin-left: 50px;
+    margin-top: 20px;
 }
+
+.stripe-button-el span { 
+    height: 35px !important;
+    background-color: black !important;
+    color: white !important;
+    font-family: "Quicksand", sans-serif !important;
+    font-size: 16px !important;
+}
+
 
 /* --------- PRODUCTS --------- */
 .product-name {

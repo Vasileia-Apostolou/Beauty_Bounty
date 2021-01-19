@@ -51,7 +51,7 @@ Cart
                    Quantity: {{cart_item.quantity}} x {{cart_item.product.price}}
                </td>
                <td>
-                   Total: {{cart_item.total}}
+                   Total:  {{cart_item.total}}
                </td>
                {% if cart_item.quantity < cart_item.product.stock %}
                <td>
@@ -84,13 +84,13 @@ Cart
                </tr>
                <tr>
                <td class="total-price">
-                <strong>Total: {{total}}</strong>
+                <strong>Total: ${{total}}</strong>
                </td>
                </tr>
                </tbody>
        </table>
        <div>
-           <form class="pay-with-card-button" action="" method="POST">
+           <form class="hvr-bob" action="" method="POST">
                {% csrf_token %}
                <script src="https://checkout.stripe.com/checkout.js"
                class="stripe-button"
@@ -105,7 +105,7 @@ Cart
                data-zip-code="true">
                </script>
            </form>
-               <a href="{% url 'home' %}" class="btn hvr-float-shadow go-back-button">Go Back</a>
+               <a href="{% url 'home' %}" class="btn hvr-bob go-back-button">Go Back</a>
        </div>
     </div>
 </div>
