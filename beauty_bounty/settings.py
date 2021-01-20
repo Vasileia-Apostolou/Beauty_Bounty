@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
+ALLOWED_HOSTS = ['vas14899-beauty-bounty.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -84,17 +84,17 @@ WSGI_APPLICATION = 'beauty_bounty.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASE = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
-
-# DATABASES = {
-#     'default':dj_database_url.parse(os.environ.get(postgres://eoxlgjvactvfbg:35cc731edf5d2dcea5d7ae673432aee858fb049e7c79fb77ef68ec051c317e30@ec2-100-25-100-81.compute-1.amazonaws.com:5432/d8dnp6a03lnsma
-#     ))
-# }
+else:
+    DATABASES = {
+       'default': {
+           'ENGINE': 'django.db.backends.sqlite3',
+           'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
