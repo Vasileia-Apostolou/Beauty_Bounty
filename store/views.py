@@ -153,7 +153,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
         except stripe.error.CardError as e:
             return False, e
 
-    return render(request, 'cart/cart.html', dict(
+    return render(request, 'store/cart.html', dict(
         cart_items=cart_items, total=total,
         counter=counter, data_key=data_key,
         order_total=order_total, description=description))

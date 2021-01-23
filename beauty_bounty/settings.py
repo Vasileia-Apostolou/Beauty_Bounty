@@ -143,6 +143,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 
 if 'USE_AWS' in os.environ:
     #   Bucket Config
+    
     AWS_STORAGE_BUCKET_NAME = 'beauty-bounty'
     AWS_S3_REGION_NAME = 'us-east-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')

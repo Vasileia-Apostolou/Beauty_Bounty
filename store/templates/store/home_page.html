@@ -7,38 +7,18 @@ Home
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <img src="{% static 'images/home.gif' %}" style="width: 100%" alt="">
-    </div>
-</div>
-<div class="py-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-10 mx-auto my-2">
-                 <h1 class="all-products-text">All Products</h1>
-            </div>
-        </div>
+        <img src="{% static 'images/homepage.gif' %}" alt="">
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        {% for product in products %}
-        <div class="col-6 mx-auto col-md-4 col-lg-3 hvr-grow">
-            <!-- <div class="card"> -->
-            <div>
-                <div class="py-2">
-                 <a href="{{product.category_url}}"> 
-                    <img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}">
-                </a>
-                </div>
-                <div class="card-footer">
-                    <p>{{product.name}}</p>
-                    <h5 class="price-tag">${{product.price}}</h5>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
+<div class="container about-section">
+    <h4 class="about-footer-text">About Us</h4>
+    <p class="about-paragraphs"><span href="/" class="beauty-bounty-text">Beauty Bounty </span> was created to make shopping easier and more fun! This is the place where all beauty lovers come to discover and purchase the best beauty products of the season. </p>
+    <p class="about-paragraphs">From makeup, skincare even fragrances we want to make sure you have the best products in your vanity simply because we believe that when you look good, you feel good!</p>
+    <p class="about-paragraphs">Feel free to contact us if you have any questions and connect with us through social media for beauty advice from our experts! </p>
+    <br>
+    <h4 class="have-fun-text">Have Fun Shopping!</h4>
+    <a href="{% url 'home' %}" class="btn start-shopping-button hvr-float-shadow">Start Shopping</a>
 </div>
 
 {% endblock %}

@@ -89,13 +89,17 @@ body {
 }
 
 .start-shopping-button {
-    background-color: black;
+    background-color: #373238;
     text-decoration: none;
     color: white;
     margin-left: 45%;
     margin-bottom: 5%;
 }
 
+.start-shopping-button:hover {
+    background-color: #5b4b5e;
+    
+}
 .stripe-button {
     background-color: blueviolet;
 }
@@ -124,6 +128,36 @@ body {
     color: white;
 }
 
+
+/* -------- ABOUT -------- */
+.about-footer-text {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    text-shadow: 0px 0px 5px white;
+}
+
+.beauty-bounty-text {
+    font-family: "Great Vibes", sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+    color: #391066;
+}
+
+.about-paragraphs {
+    font-size: 18px;
+    text-align: center;
+}
+
+.have-fun-text {
+    text-align: center;
+    text-shadow: 0px 0px 1px rgb(109, 99, 108);
+    margin-bottom: 5%;
+}
 
 
 /* --------- PRODUCTS --------- */
@@ -275,19 +309,6 @@ footer {
     float: right;
 }
 
-.beauty-bounty-text {
-    font-family: "Great Vibes", sans-serif;
-    font-size: 30px;
-    text-decoration: none;
-    color: #391066;
-}
-
-.beauty-bounty-text:hover {
-    color: #602997;
-    text-shadow: 0px 1px 0px #b0acab;
-}
-
-.about-footer-text,
 .contact-footer-text,
 .connect-footer-text {
     text-align: center;
