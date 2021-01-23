@@ -10,11 +10,15 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 
 
-# HOME
 def home(request, category_slug=None):
+    """
+    This is view for the
+    Homepage.
+    """
     category_page = None
     products = None
-    if category_slug != None:
+    # Checks if the category has slug
+    if category_slug is not None:
         category_page = get_object_or_404(Category, slug=category_slug)
         products = Product.objects.filter(
             category=category_page, available=True)
@@ -149,7 +153,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
         except stripe.error.CardError as e:
             return False, e
 
-    return render(request, 'store/cart.html', dict(
+    return render(request, 'cart/cart.html', dict(
         cart_items=cart_items, total=total,
         counter=counter, data_key=data_key,
         order_total=order_total, description=description))
