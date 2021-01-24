@@ -5,29 +5,23 @@
             class="fas fa-bars"></i></button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item dropdown"><a class="nav-link" href="{% url 'home' %}">All Products</a></li>
+            <li class="nav-item dropdown"><a class="nav-link" href="{% url 'all_products' %}">All Products</a></li>
             <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown">Categories</a>
                 {% for category in links %}
                 <div class="dropdown-content dropdown-menu">
                     <a class="dropdown-item" href="{{category.category_url}}">{{category.name}}</a>{% endfor %}
                 </div>
             </li>
-            <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown">New</a>
+            <!-- <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown">New</a>
                 <div class="dropdown-menu dropdown-content">
                     <a class="dropdown-item" href="">Color Pop Cosmetics</a>
                     <a class="dropdown-item" href="">Fenty Skin</a>
                     <a class="dropdown-item" href="">Ofra</a>
                 </div>
-            </li>
-            <li class="nav-item"><a class="nav-link px-3" href="" data-toggle="dropdown">Best Sellers</a>
-            </li>
+            </li> -->
+            <!-- <li class="nav-item"><a class="nav-link px-3" href="" data-toggle="dropdown">Best Sellers</a>
+            </li> -->
             <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown">Fragrances</a>
-                <div class="dropdown-menu dropdown-content">
-                    <a class="dropdown-item" href="">All</a>
-                    <a class="dropdown-item" href="">Kayali</a>
-                    <a class="dropdown-item" href="">Valentino</a>
-                    <a class="dropdown-item" href="">Giorgio Armani</a>
-                </div>
             </li>
             <div class="navbar-icons ml-auto">
                 {% if request.user.is_authenticated and request.user.first_name %}
@@ -42,20 +36,6 @@
                             class="fas fa-user navbar-icons"></i></a>
                 </li>
                 {% endif %}
-               
-                
-                <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown"><i
-                            class="fas fa-search search navbar-icons"></i></a>
-                    <form class="form-inline dropdown-content dropdown-menu dropdown-search-bar"
-                        action="{% url 'search' %}" , method="GET">
-                        <div>
-                            <input type="text" name="product" placeholder="Search">
-                            <div>
-                                <button type="submit"><i class="fas fa-search"></i></button>
-                            </div>
-                        </div>
-                    </form>
-                </li>
 
                 {% if item_count > 0 %}
                 <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="{% url 'cart_detail' %}"
@@ -66,6 +46,21 @@
                         data-toggle="dropdown"><i class="fas fa-shopping-bag navbar-icons"></i></a>
                     {% endif %}
                 </li>
+               
+                
+                <!-- <li class="nav-item"><a class="nav-link px-3" href="" data-toggle="dropdown"><i
+                            class="fas fa-search search navbar-icons"></i></a> -->
+                    <form action="{% url 'search' %}" , method="GET">
+                        <div class="input-group w-100">
+                            <div class="input-group-append">
+                                <button class="form-control btn btn-black border border-black rounded-0" type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                            <input class="form-control border border-black rounded-0" type="text" name="product" placeholder="Search">
+                        </div>
+                    </form>
+                
+                <!-- </li> -->
+
             </div>
         </ul>
     </div>
