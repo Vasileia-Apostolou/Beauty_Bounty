@@ -95,8 +95,17 @@ The navbar includes 5 links(categories) such as All Products, Brands, New, Best 
 - **Search** -
 The search bar allows the user to type any word(s) related to the product they are searching for. If there's any product(s) corresponding to their search, the product(s) will appear in a separate page. If there's is no product corresponding to their search, a message will appear stating "No Products Found".
 
-- **View Producst** -
+- **All Products** -
+Users can view all the app's products both in-stock and out-of-stock by clicking on "All Products" in the navbar. The products are being displayed in an alphabetical order. Each product has an image, name, price and it's clickable so that users can see further details about the product they are interested in.
+
+- **View Product** -
 The user can click on a specific product to view product details. It will take the user to a new page where by the product name, price and description will be displayed. If the product is in-stock there will be an "Add To Cart" button which if clicked, will take the user to their cart, but if the product is out-of-stock there will be no action but a heading stating "Out Of Stock".
+
+- **Cart** -
+In the cart we have two sections. Items section and Checkout section. In the items section is the order summary. The products that were added to the cart by the user are being displayed along with their name, price and quantity set to 1 by default. However, the user is able to increase or decrease the quantity by clicking on the + or - icon accordingly, or delete the product from their cart by clicking on the bin icon. If the product is no longer in-stock, the + icon will disappear leaving the user with no choice of increasing the product quantity. The total of each product is being calculated next to it(eg. 100x1 = $100 or 100x3 = $300). On the checkout section the total amount of all products are being calculated and the user can proceed with the payment by clicking on the "Pay With Card" button. Once the button is clicked a form will appear where by the user will have to fill in personal information such as shipping or billing address and credit card details. 
+
+- **Completed Order** -
+If the payment goes through successfully, the user will be taken to the "Thank You" page. The "Thank You" page includes an images stating "Thank You for your order", the order number underneath the image and a "Continue Shopping" button.
 
 - **User Profile / Order History** -
 In the user profile there is an order history table with the orders number, data, amound spent, and action. In the action column is an anchor element "View Order".
@@ -110,8 +119,8 @@ When a new account is successfully created the user will be taken to the Welcome
 - **Login** -
 Users can login in their account by clicking on the user icon in the search bar which will take them to a page with register or login section. The login form has a username and password field which if correctly filled the will be successfully logged in and taken to the home page.
 
-- **Navbar** -
-- **Navbar** -
+- **Logout** -
+Users and logout from their account by clicking on "Logout" in the navbar. Users will then be redirected to the register/login page.
 
 - **Footer** -
 The footer includes two sections. A contact section with a clickable email address which opens up an email form in a new tab and a phone number with a paragraph that shows operating hours. Plus a connect section with social media links.
