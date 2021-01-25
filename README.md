@@ -95,16 +95,19 @@ The navbar includes 5 links(categories) such as All Products, Brands, New, Best 
 - **Search** -
 The search bar allows the user to type any word(s) related to the product they are searching for. If there's any product(s) corresponding to their search, the product(s) will appear in a separate page. If there's is no product corresponding to their search, a message will appear stating "No Products Found".
 
+- **View Producst** -
+The user can click on a specific product to view product details. It will take the user to a new page where by the product name, price and description will be displayed. If the product is in-stock there will be an "Add To Cart" button which if clicked, will take the user to their cart, but if the product is out-of-stock there will be no action but a heading stating "Out Of Stock".
 
+- **Navbar** -
+- **Navbar** -
+- **Navbar** -
+- **Navbar** -
+- **Navbar** -
+- **Navbar** -
 
-- **Navbar** -
-- **Navbar** -
-- **Navbar** -
-- **Navbar** -
-- **Navbar** -
-- **Navbar** -
-- **Navbar** -
-- **Navbar** -
+- **Footer** -
+The footer includes two sections. A contact section with a clickable email address which opens up an email form in a new tab and a phone number with a paragraph that shows operating hours. Plus a connect section with social media links.
+
 
 
 
