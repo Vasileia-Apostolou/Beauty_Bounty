@@ -19,10 +19,8 @@
                     <a class="dropdown-item" href="">Ofra</a>
                 </div>
             </li> -->
-            <!-- <li class="nav-item"><a class="nav-link px-3" href="" data-toggle="dropdown">Best Sellers</a>
-            </li> -->
-            <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown">Best Sellers</a>
-            </li>
+            <li class="nav-item"><a class="nav-link px-3" href="" data-toggle="dropdown">Best Sellers</a>
+            </li> 
             <div class="navbar-icons ml-auto">
                 {% if request.user.is_authenticated and request.user.first_name %}
                 <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="{% url 'history' %}"><i
