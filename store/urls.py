@@ -14,3 +14,4 @@ urlpatterns = [
     path('order_complete/<int:order_id>',
          views.completed_order, name='completed_order'),
 ]
+

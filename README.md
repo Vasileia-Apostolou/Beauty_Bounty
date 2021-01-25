@@ -137,7 +137,7 @@ The footer includes two sections. A contact section with a clickable email addre
 
 
 
-
+* created cart - deleted database - reupload products
 * sqlite3
 * max product quantity
 
