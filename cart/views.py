@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render
+from .models import Product, Cart, CartItem
 from django.core.exceptions import ObjectDoesNotExist
 import stripe
 from django.conf import settings
@@ -102,7 +103,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
                         order=order_details
                     )
                     or_item.save()
-                
+
                     # reducing the stock
                     products = Product.objects.get(id=order_item.product.id)
                     products.stock = int(
