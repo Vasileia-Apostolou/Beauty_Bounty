@@ -98,9 +98,14 @@ The search bar allows the user to type any word(s) related to the product they a
 - **View Producst** -
 The user can click on a specific product to view product details. It will take the user to a new page where by the product name, price and description will be displayed. If the product is in-stock there will be an "Add To Cart" button which if clicked, will take the user to their cart, but if the product is out-of-stock there will be no action but a heading stating "Out Of Stock".
 
-- **Navbar** -
-- **Navbar** -
-- **Navbar** -
+- **User Profile / Order History** -
+In the user profile there is an order history table with the orders number, data, amound spent, and action. In the action column is an anchor element "View Order".
+
+- **Register** -
+Users can create their own account for free by clicking on the user icon in the search bar which will take them to a page with register or login section. In the register section the user will have to click on the "Create New Account" button which will take them to the register page where by the user will have to fill a form with their personal details (Name, Surname, Username, Email Address, Password, Repeat Password). Once the form is correctly filled and the "Submit" button is clicked, a new account will be created. If the form is filled incorrectly (wrong password match) the user cannot continue and create an account.
+
+- **Welcome Page** -
+
 - **Navbar** -
 - **Navbar** -
 - **Navbar** -
