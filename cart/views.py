@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from .models import Product, Cart, CartItem
+from .models import Product, Cart, CartItem, Order
 from django.core.exceptions import ObjectDoesNotExist
 import stripe
 from django.conf import settings
@@ -124,6 +124,12 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
         cart_items=cart_items, total=total,
         counter=counter, data_key=data_key,
         order_total=order_total, description=description))
+
+# COMPLETED ORDER PAGE
+def completed_order(request, order_id):
+    if order_id:
+        order = get_object_or_404(Order, id=order_id)
+    return render(request, 'store/completed_order.html', {'order': order})
 
 
 # DELETE PRODUCT FROM CART

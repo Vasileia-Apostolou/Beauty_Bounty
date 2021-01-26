@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from cart.models import Product
-# from django.core.exceptions import ObjectDoesNotExist
-# import stripe
-# from django.conf import settings
+from cart.models import Product, Order
+from django.core.exceptions import ObjectDoesNotExist
+import stripe
+from django.conf import settings
 from django.contrib.auth.models import Group, User
 from .forms import RegistrationForm
 from django.contrib.auth.forms import AuthenticationForm
@@ -96,10 +96,3 @@ def customerHistory(request):
 def search(request):
     products = Product.objects.filter(name__contains=request.GET['product'])
     return render(request, 'store/all_products.html', {'products': products})
-
-
-# COMPLETED ORDER PAGE
-def completed_order(request, order_id):
-    if order_id:
-        order = get_object_or_404(Order, id=order_id)
-    return render(request, 'store/completed_order.html', {'order': order})
