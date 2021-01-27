@@ -125,6 +125,19 @@ Users and logout from their account by clicking on "Logout" in the navbar. Users
 - **Footer** -
 The footer includes two sections. A contact section with a clickable email address which opens up an email form in a new tab and a phone number with a paragraph that shows operating hours. Plus a connect section with social media links.
 
+## Features Left To Implement
+- **Pagination**
+
+ In the future, I would like to add pagination in my app to break the content into seperate pages for a more user-friendly experience.
+
+- **Carousel Slide**
+
+In the future, I would like to add a carousel slider to display makeup looks and ideas to inspire the page visitors.
+
+- **Tutorials**
+
+In the future, I would like to add a page with makeup/skincare tutorials from beauty experts sharing their beauty  tips & tricks and videos on how to use a specific makeup or skincare products that's available on the app!
+
 
 
 
