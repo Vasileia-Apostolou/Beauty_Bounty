@@ -437,5 +437,7 @@ footer {
 @media only screen and (max-width: 800px) {
     .home-image {
         margin-top: 25%;
+        margin-bottom: 5%;
+        width: 100%;
     }
 }
