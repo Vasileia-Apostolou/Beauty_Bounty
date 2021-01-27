@@ -1,1 +1,1 @@
-web: gunicorn beauty-bounty.wsgi:application
+web: gunicorn Beauty_Bounty.wsgi:application
