@@ -133,14 +133,28 @@ def completed_order(request, order_id):
     return render(request, 'store/completed_order.html', {'order': order})
 
 
-# DELETE PRODUCT FROM CART
+# DECEASE ITEM QUANTITY
+def decrease_quantity(request, product_id):
+    cart = Cart.objects.get(cart_id=_cart_id(request))
+    product = get_object_or_404(Product, id=product_id)
+    cart_item = CartItem.objects.get(product=product, cart=cart)
+    '''
+      Checks if item quantity
+      is greater than 1
+    '''
+    if cart_item.quantity > 1:
+        cart_item.quantity -= 1
+        cart_item.save()
+    else:
+        cart_item.delete()
+    return redirect('cart_detail')
+
+
+# DELETE ITEM FROM CART
 def remove_product(request, product_id):
     cart = Cart.objects.get(cart_id=_cart_id(request))
     product = get_object_or_404(Product, id=product_id)
     cart_item = CartItem.objects.get(product=product, cart=cart)
-    if cart_item.quantity > 1:
-        cart_item.quantity -= 1
-    else:
-        cart_item.delete()
-    return redirect('card_detail')
+    cart_item.delete()
+    return redirect('cart_detail')
 

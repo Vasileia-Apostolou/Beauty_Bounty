@@ -1,5 +1,6 @@
 from django.urls import path
-from .views import (add_cart, cart_detail, completed_order, remove_product)
+from .views import (add_cart, cart_detail, completed_order,
+                    decrease_quantity, remove_product)
 
 
 urlpatterns = [
@@ -7,6 +8,8 @@ urlpatterns = [
     path('cart', cart_detail, name='cart_detail'),
     path('order_complete/<int:order_id>',
          completed_order, name='completed_order'),
-    path('product/remove/<int:product_id>',
+    path('decrease/quantity/<int:product_id>',
+         decrease_quantity, name='decrease_quantity'),
+    path('cart/remove/<int:product_id>',
          remove_product, name='remove_product'),
 ]
