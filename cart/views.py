@@ -1,5 +1,5 @@
-from django.shortcuts import redirect, render
-from .models import Product, Cart, CartItem, Order
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import Product, Cart, CartItem, Order, OrderItem
 from django.core.exceptions import ObjectDoesNotExist
 import stripe
 from django.conf import settings
@@ -125,6 +125,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
         counter=counter, data_key=data_key,
         order_total=order_total, description=description))
 
+
 # COMPLETED ORDER PAGE
 def completed_order(request, order_id):
     if order_id:
@@ -133,10 +134,13 @@ def completed_order(request, order_id):
 
 
 # DELETE PRODUCT FROM CART
-# def cart_remove_product(request, product_id):
-#     cart = Cart.objects.get(cart_id=_cart_id(request))
-#     product = get_object_or_404(Product, id=product_id)
-#     cart_item = CartItem.objects.get(product=product, cart=cart)
-#     cart.item.delete()
-#     return redirect('card_detail')
+def remove_product(request, product_id):
+    cart = Cart.objects.get(cart_id=_cart_id(request))
+    product = get_object_or_404(Product, id=product_id)
+    cart_item = CartItem.objects.get(product=product, cart=cart)
+    if cart_item.quantity > 1:
+        cart_item.quantity -= 1
+    else:
+        cart_item.delete()
+    return redirect('card_detail')
 

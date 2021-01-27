@@ -14,7 +14,7 @@ Cart
     <br><br><br>
     <h2 class="empty-cart-text">Empty Cart</h2>
     <br>
-    <p class="click-here-text">Click <a class="here-text" href="{% url 'home' %}"> here </a> to start shopping</p>
+    <p class="click-here-text">Click <a class="here-text" href="{% url 'all_products' %}"> here </a> to start shopping</p>
     <br><br><br><br>
 </div>
 {% else %}
@@ -55,13 +55,13 @@ Cart
                </td>
                {% if cart_item.quantity < cart_item.product.stock %}
                <td>
-                   <a class="add-quantity try " href="{% url 'add_cart' cart_item.product.id %}"><i class="fas fa-plus"></i></a>
-                   <a class="try" href=""><i class="fas fa-minus"></i></a>
+                   <a class="add-quantity" href="{% url 'add_cart' cart_item.product.id %}"><i class="fas fa-plus"></i></a>
+                   <a class="try" href="{% url 'cart_remove_product' cart_item.product.id %}"><i class="fas fa-minus"></i></a>
                    <a class="try" href=""><i class="far fa-trash-alt"></i></a>
                </td>
                {% else %}
-                <!-- <a class="try2" href=""><i class="fas fa-minus"></i></a>
-                <a class="try2" href=""><i class="far fa-trash-alt"></i></a> -->
+                <a class="" href="{% url 'cart_remove_product' cart_item.product.id %}"><i class="fas fa-minus"></i></a>
+                <a class="" href=""><i class="far fa-trash-alt"></i></a>
                {% endif %}
            </tr>
            {% endfor %}

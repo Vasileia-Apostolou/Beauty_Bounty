@@ -163,8 +163,6 @@ if 'USE_AWS' in os.environ:
 
 # Stripe
 STRIPE_CURRENCY = 'usd'
-# STRIPE_PUBLISHABLE = os.environ.get('STRIPE_PUBLISHABLE_KEY')
-# STRIPE_SECRET = os.environ.get('STRIPE_SECRET_KEY')
 
 STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')

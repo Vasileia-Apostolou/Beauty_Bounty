@@ -121,6 +121,6 @@ class OrderItem(models.Model):
 
     def total(self):
         return self.quantity * self.price
-    
+
     def __str__(self):
         return self.product

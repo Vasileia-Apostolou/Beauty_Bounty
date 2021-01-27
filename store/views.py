@@ -8,8 +8,8 @@ from .forms import RegistrationForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
-# from django.contrib import messages
-# from django.contrib.messages import get_messages
+from django.contrib import messages
+from django.contrib.messages import get_messages
 
 
 def home(request):
