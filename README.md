@@ -179,6 +179,16 @@ Chrome DevTools is a set of web developer tools built directly into the Google C
 
 2. Fonts were taken from [Google Fonts](https://fonts.google.com/).
 
+3. [Bootstrap](https://getbootstrap.com/) classes were used to build the navigation bar and to make the website responsive.
+
+### Frameworks 
+1. [Django](https://www.djangoproject.com/) is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+
+2. [jQuery](https://jquery.com/) is a fast, small, and feature-rich JavaScript library. It was used in this project to simplify the DOM.
+
+### Hosting 
+* [Heroku](https://www.heroku.com/) was used as the hosting platform to deploy this app.
+
 ### Testing
 
 ## Resolved
