@@ -138,8 +138,46 @@ In the future, I would like to add a carousel slider to display makeup looks and
 
 In the future, I would like to add a page with makeup/skincare tutorials from beauty experts sharing their beauty  tips & tricks and videos on how to use a specific makeup or skincare products that's available on the app!
 
+## Technologies Used
 
+### Languages
+1. [HTML](https://en.wikipedia.org/wiki/HTML)
 
+HTML was used in this project to keep up with the latest industry standards. 
+
+2. [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+
+CSS was used for styling the content.
+
+3. [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+JavaScript was used to create the main functional logic of this app. 
+
+4. [Python](https://en.wikipedia.org/wiki/Python_programming_language)
+
+Python was used as the back-end programming language for this app.
+
+### Tools
+1. [Git](https://git-scm.com/)
+
+Git was used in this project for version control.
+
+2. [Gitpod](https://www.gitpod.io/)
+
+Gitpod was used to develop this project.
+
+3. [Balsamiq](https://balsamiq.com/)
+
+Balsamiq was used to create the wireframes.
+
+4. [Dev Tools](https://developers.google.com/web/tools/chrome-devtools)
+
+Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser. DevTools can help you edit pages on-the-fly and diagnose problems quickly, which ultimately helps you build better websites, faster. Google Chrome's Dev Tools was used in the building process of this project.
+
+### Libraries 
+1. Icons were obtained from [Font Awesome](https://fontawesome.com/).
+
+2. Fonts were taken from [Google Fonts](https://fonts.google.com/).
 
 ### Testing
 
