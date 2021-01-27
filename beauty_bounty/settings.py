@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['vas14899-beauty-bounty.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['beauty-bounty.herokuapp.com', 'localhost']
 
 
 # Application definition
