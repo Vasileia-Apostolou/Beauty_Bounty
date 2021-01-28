@@ -1,5 +1,8 @@
+import uuid
 from django.db import models
 from django.urls import reverse
+from django.db.models import Sum
+from django.conf import settings
 
 
 # Category Model
@@ -30,7 +33,6 @@ class Category(models.Model):
 # Product Model
 class Product(models.Model):
     name = models.CharField(max_length=250, unique=True)
-    brand = models.CharField(max_length=250, unique=True)
     slug = models.SlugField(max_length=250, unique=True)
     description = models.TextField(blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -40,6 +42,35 @@ class Product(models.Model):
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+    # def order_number(self):
+    #     '''
+    #     Generate a unique order number
+    #     '''
+    #     return uuid.uuid4().hex.upper()
+
+    # def calculate_deliver(self):
+    #     """
+    #     Update order total depending on
+    #     delivery
+    #     """
+    #     self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+    #     if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
+    #         self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+    #     else:
+    #         self.delivery_cost = 0
+    #     self.grand_total = self.order_total + self.delivery_cost
+    #     self.save()
+
+
+    # def save(self, *args, **kwargs):
+    #     '''
+    #     If the order number hasn't been set already,
+    #     override the original save method
+    #     '''
+    #     if not self.order_number:
+    #         self.order_number = self.order_number()
+    #     super().save(*args, **kwargs)
 
     class Meta:
         ordering = ('name',)
@@ -109,6 +140,9 @@ class Meta:
     def __str__(self):
         return str(self.id)
 
+    # def __str__(self):
+    #     return self.order_number
+
 
 class OrderItem(models.Model):
     product = models.CharField(max_length=300)
@@ -116,6 +150,14 @@ class OrderItem(models.Model):
     price = models.DecimalField(
         max_digits=10, decimal_places=2, verbose_name='Price')
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
+
+    # def save(self, *args, **kwargs):
+    #     '''
+    #     Override the original save method to set the lineitem
+    #     total and update the order total
+    #     '''
+    #     self.lineitem_total = self.product.price * self.quantity
+    #     super().save(*args, **kwargs)
 
     class Meta:
         db_table = 'OrderItem'
@@ -125,3 +167,6 @@ class OrderItem(models.Model):
 
     def __str__(self):
         return self.product
+
+    # def __str__(self):
+    #     return f'SKU {self.product.sku} on order {self.order.order_number}'

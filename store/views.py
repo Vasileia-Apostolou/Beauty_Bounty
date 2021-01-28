@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from cart.models import Product, Order
+from cart.models import Product, Order, OrderItem
 from django.core.exceptions import ObjectDoesNotExist
 import stripe
 from django.conf import settings
@@ -85,11 +85,26 @@ def logoutView(request):
 # ORDER HISTORY
 @login_required(redirect_field_name='next', login_url='login')
 def customerHistory(request):
+    '''
+    If user is authenticated show orders based
+    on users email address
+    '''
     if request.user.is_authenticated:
         email = str(request.user.email)
         order_details = Order.objects.filter(emailAddress=email)
     return render(request, 'store/history.html', {
         'order_details': order_details})
+
+
+# VIEW ORDER
+@login_required(redirect_field_name='next', login_url='login')
+def viewOrder(request, order_id):
+    if request.user.is_authenticated:
+        email = str(request.user.email)
+        order = Order.objects.get(id=order_id, emailAddress=email)
+        order_items = OrderItem.objects.filter(order=order)
+    return render(request, 'store/view_order.html', {
+        'order': order, 'order_items': order_items})
 
 
 # SEARCH PRODUCT

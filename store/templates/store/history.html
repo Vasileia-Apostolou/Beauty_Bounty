@@ -27,7 +27,7 @@ History
                 <td>{{ order.created }}</td>
                 <td>$ {{ order.total }}</td>
                 <td><i class="far fa-check-circle status"></i></td>
-                <td><a href="">View Order</a></td>
+                <td><a href="{% url 'view_order' order.id %}">View Order</a></td>
             </tr>
             {% endfor %}
         </tbody>

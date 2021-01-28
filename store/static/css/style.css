@@ -12,6 +12,7 @@ body {
 /* -------- NAV -------- */
 .navbar {
     background-color: #f8f0ff !important;
+    /* background: url("../images/home.gif"); */
 }
 
 .navbar-brand {
@@ -259,6 +260,19 @@ background-size: cover;
     color: green;
 }
 
+/* ------- VIEW ORDER --------*/
+.view_order {
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 6px;
+   font-size: 30px; 
+}
+
+.td {
+   text-align: center;
+   font-size: 18px;
+   text-shadow: 0px 0px 1px #5b4b5e;
+}
 
 /* ------- REGISTRATION FORM ---------*/
 .errorlist li {

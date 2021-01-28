@@ -128,8 +128,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
 
 # COMPLETED ORDER PAGE
 def completed_order(request, order_id):
-    if order_id:
-        order = get_object_or_404(Order, id=order_id)
+    order = get_object_or_404(Order, id=order_id)
     return render(request, 'store/completed_order.html', {'order': order})
 
 
