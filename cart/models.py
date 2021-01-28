@@ -30,6 +30,7 @@ class Category(models.Model):
 # Product Model
 class Product(models.Model):
     name = models.CharField(max_length=250, unique=True)
+    brand = models.CharField(max_length=250, unique=True)
     slug = models.SlugField(max_length=250, unique=True)
     description = models.TextField(blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
