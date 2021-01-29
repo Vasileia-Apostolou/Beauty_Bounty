@@ -1,0 +1,24 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %} 
+Best Sellers
+{% endblock %}
+
+{% block content %}
+
+{% for product in products %}
+<div>
+<h3>Best Sellers</h3>
+{% if product.stock <=10 %}
+<a href="{{ product.category_url }}">
+    <img src="{{ product.img.url }}">
+</a>
+</div>
+{% else %}
+{% endif %}
+{% endfor %}
+
+
+
+{% endblock %} 

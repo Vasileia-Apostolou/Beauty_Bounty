@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
             <li class="nav-item dropdown"><a class="nav-link" href="{% url 'all_products' %}">All Products</a></li>
-            <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown">Categories</a>
+            <li class="nav-item dropdown"><a class="nav-link px-4" href="" data-toggle="dropdown">Categories</a>
                 {% for category in links %}
                 <div class="dropdown-content dropdown-menu">
                     <a class="dropdown-item" href="{{category.category_url}}">{{category.name}}</a>{% endfor %}
