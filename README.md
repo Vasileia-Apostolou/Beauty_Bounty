@@ -134,10 +134,6 @@ The footer includes two sections. A contact section with a clickable email addre
 
 In the future, I would like to add a carousel slider to display makeup looks and ideas to inspire the page visitors.
 
-- **Tutorials**
-
-In the future, I would like to add a page with makeup/skincare tutorials from beauty experts sharing their beauty  tips & tricks and videos on how to use a specific makeup or skincare products that's available on the app!
-
 ## Technologies Used
 
 ### Languages
