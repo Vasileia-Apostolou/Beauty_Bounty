@@ -472,4 +472,11 @@ footer {
     margin-left: 20%;
     margin-top: 5%; 
 }
+
+.shopping-cart-text {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+ 
+}
 }
