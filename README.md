@@ -190,9 +190,9 @@ Chrome DevTools is a set of web developer tools built directly into the Google C
 ### Hosting 
 * [Heroku](https://www.heroku.com/) was used as the hosting platform to deploy this app.
 
-### Testing
+## Testing
 
-## Resolved
+### Resolved
 * -icons floating
 * SECRET KEY EXPOSED! x2
 * POSTGRES URI Exposed, destroyed database
@@ -200,11 +200,18 @@ Chrome DevTools is a set of web developer tools built directly into the Google C
 * sqlite3
 * max product quantity
 
-### Deployment
-## Live App Link 
+## Deployment
+
+### Live App Link 
 Click the link below to run my project in the live environment:
 
 * [Beauty Bounty](https://beauty-bounty.herokuapp.com/)
+
+### Repository Link
+
+Click the link below to visit my project's GitHub repository:
+
+* [Beauty Bounty Repository](https://github.com/Vasileia-Apostolou/Beauty_Bounty)
 
 I used GitHub for my version control and Heroku to host the live version of my project. To deploy my website to Heroku, I used the following steps:
 
