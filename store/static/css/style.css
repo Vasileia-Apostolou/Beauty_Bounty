@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300&display=swap');
 
-/* html {
+html {
     height: 100%;
-} */
+}
 
 body {
+    margin: 0;
     font-family: "Quicksand", sans-serif;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .try {
@@ -51,7 +55,7 @@ body {
 
 .free-delivery-banner {
     background-color: black;
-    color: #ffffff;
+    color: #fcdcf8;
 }
 
 /* -------- DROPDOWN MENU ---------*/
@@ -328,6 +332,7 @@ background-size: cover;
 
 /* -------- FOOTER --------*/
 footer {
+    margin-top: auto;
    display: flex;  
    left: 0;
    bottom: 0;
@@ -337,7 +342,7 @@ footer {
    /* background: url("../images/navbar1.jpg"); */
    color: black;
    text-align: center;
-   padding-top: 50px;
+   padding-top: 50px; 
 }
 
 .copyright {
