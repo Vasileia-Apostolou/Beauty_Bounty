@@ -23,6 +23,7 @@ def home(request):
 def all_products(request, category_slug=None):
     category_page = None
     products = None
+
     if category_slug is not None:
         category_page = get_object_or_404(Category, slug=category_slug)
         products = Product.objects.filter(
@@ -110,4 +111,5 @@ def viewOrder(request, order_id):
 # SEARCH PRODUCT
 def search(request):
     products = Product.objects.filter(name__contains=request.GET['product'])
-    return render(request, 'store/search.html', {'products': products})
+    return render(request, 'store/all_products.html', {'products': products})
+

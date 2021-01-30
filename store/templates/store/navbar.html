@@ -1,19 +1,24 @@
-<nav class="navbar navbar-expand-md nav-extended bg-dark fixed-top">
-    <a class="navbar-brand" href="/">Beauty Bounty</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
-            class="fas fa-bars"></i></button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto">
-            <li class="nav-item dropdown"><a class="nav-link" href="{% url 'all_products' %}">All Products</a></li>
+
+<nav class="navbar navbar-expand-lg navbar-light primary_color">
+            
+            <a class="navbar-brand" href="/">Beauty Bounty</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+ 
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item dropdown"><a class="nav-link" href="{% url 'all_products' %}">All Products</a></li>
             <li class="nav-item dropdown"><a class="nav-link px-4" href="" data-toggle="dropdown">Categories</a>
                 {% for category in links %}
                 <div class="dropdown-content dropdown-menu">
                     <a class="dropdown-item" href="{{category.category_url}}">{{category.name}}</a>{% endfor %}
                 </div>
             </li>
-            <!-- <li class="nav-item dropdown"><a class="nav-link px-3" href="" data-toggle="dropdown">New</a>
-            </li> -->
+        
             <li class="nav-item"><a class="nav-link px-3" href="" data-toggle="dropdown">Best Sellers</a>
             </li> 
             <div class="navbar-icons ml-auto">
@@ -40,9 +45,6 @@
                     {% endif %}
                 </li>
                
-                
-                <!-- <li class="nav-item"><a class="nav-link px-3" href="" data-toggle="dropdown"><i
-                            class="fas fa-search search navbar-icons"></i></a> -->
                     <form action="{% url 'search' %}" , method="GET">
                         <div class="input-group w-100">
                             <div class="input-group-append">
@@ -51,10 +53,16 @@
                             <input class="form-control border border-black rounded-0" type="text" name="product" placeholder="Search">
                         </div>
                     </form>
-                
-                <!-- </li> -->
 
             </div>
+          
+           
         </ul>
-    </div>
+        
+            
+        </div>
 </nav>
+
+
+
+

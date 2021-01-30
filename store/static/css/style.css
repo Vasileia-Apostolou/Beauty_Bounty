@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300&display=swap');
 
+/* html {
+    height: 100%;
+} */
+
 body {
     font-family: "Quicksand", sans-serif;
 }
@@ -11,15 +15,14 @@ body {
 
 /* -------- NAV -------- */
 .navbar {
-    /* background-color: #f8f0ff !important; */
     background: url("../images/navbar5.jpg");
-}
+} 
 
 .navbar-brand {
     text-align: center;
-    font-size: 42px;
+    font-size: 32px;
     font-family: "Great Vibes", fantasy;
-    margin-left: 30px;
+    margin-left: 20px;
     color: #391066;
  
 }
@@ -30,6 +33,8 @@ body {
 }
 
 .navbar li a {
+    font-size: 20px;
+    font-weight: bold;
     color: black;
 }
 
@@ -38,8 +43,20 @@ body {
     color: #391066 !important;
 }
 
+/* #delivery-banner {
+    display: inline-block;
+    background-color: #481679;
+    color: #ffffff;
+    margin-bottom: -6px;
+} */
+
+.free-delivery-banner {
+    background-color: #982bd6;
+    color: #ffffff;
+}
+
 /* -------- DROPDOWN MENU ---------*/
-.dropdown {
+/* .dropdown {
   position: relative;
   display: inline-block;
 }
@@ -66,7 +83,7 @@ body {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
 
 /* ------- IMAGES --------*/
 .welcome-img {
@@ -91,8 +108,8 @@ body {
 }
 
 .start-shopping-button {
-    /* background-color: #373238; */
-    background: url("../images/button6.jpg");
+    background-color: #373238;
+    /* background: url("../images/button6.jpg"); */
     text-decoration: none;
     color: white;
     margin-left: 45%;
@@ -308,9 +325,9 @@ background-size: cover;
     margin-top: 11%;
 }
 
-.text-center {
+/* .text-center {
     margin-top: 7%;
-}
+} */
 
 .register-now-text {
     text-align: center;
