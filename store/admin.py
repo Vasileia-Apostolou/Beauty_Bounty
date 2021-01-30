@@ -1,13 +1,12 @@
 from django.contrib import admin
-from cart.models import Category, Product
-from cart.models import Order, OrderItem
+from cart.models import Category, Product, Order, OrderItem, Review
 
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['name', 'slug']
     prepopulated_fields = {'slug': ('name',)}
 
-    
+
 admin.site.register(Category, CategoryAdmin)
 
 
@@ -25,8 +24,8 @@ admin.site.register(Product, ProductAdmin)
 class OrderItemAdmin(admin.TabularInline):
     model = OrderItem
     fieldsets = [
-        ('Product', {'fields': ['product'],}),
-        ('Quantity', {'fields': ['quantity'],}),
+        ('Product', {'fields': ['product'], }),
+        ('Quantity', {'fields': ['quantity'], }),
         ('Price', {'fields': ['price'], }),
     ]
     readonly_fields = ['product', 'quantity', 'price']
@@ -58,5 +57,5 @@ class OrderItemAdmin(admin.TabularInline):
             return False
 
 
-
+admin.site.register(Review)
 

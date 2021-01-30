@@ -332,7 +332,7 @@ background-size: cover;
 
 /* -------- FOOTER --------*/
 footer {
-    margin-top: auto;
+   margin-top: auto;
    display: flex;  
    left: 0;
    bottom: 0;
@@ -383,10 +383,10 @@ footer {
 }
 
 .socials li a i {
-    margin-left: 30px;
+    /* margin-left: 30px;
     font-size: 30px;
-    color: #391066;
-    text-shadow: 0px 0px 1px #9e62d9;
+    color: #391066;*/
+    text-shadow: 0px 0px 1px #9e62d9; 
     
 }
 
