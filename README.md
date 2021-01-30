@@ -196,13 +196,89 @@ Chrome DevTools is a set of web developer tools built directly into the Google C
 * -icons floating
 * SECRET KEY EXPOSED! x2
 * POSTGRES URI Exposed, destroyed database
-
-
-
 * created cart - deleted database - reupload products
 * sqlite3
 * max product quantity
 
+### Deployment
+I used GitHub for my version control and Heroku to host the live version of my project. To deploy my website to Heroku, I used the following steps:
+
+1. Created the app in Heroku.
+2. Went to the **Resources** tab in Heroku and searched for **Heroku Postgres** in the 'Add-Ons' section.
+3. Selected the free **Hobby** level.
+4. Updated the `.bashrc` file within my local workspace with the `DATABASE_URL` details, and the `settings.py` to connect to the database using the `dj_database_url` package.
+5. Ran the `python3 manage.py makemigrations`, `python3 manage.py migrate`, `python3 manage.py createsuperuser` commands to migrate the models into Heroku Postgres and create a new super user in the new PostgreSQL database.
+5. Went to the **Settings** tab in Heroku and clicked on the **Reveal Config Vars** button.
+6. Copied and pasted all of the `.bashrc` default variables in Heroku's Config Vars section.
+7. Went to the **Deploy** tab in Heroku, connected my app to my GitHub repository and selected **Enable Automatic Deployment** as the deployment method.
+8. Went to the **Developers** section in Stripe and clicked on **API Keys**.
+9. Copied and pasted the **Publishable Key** and **Secret Key** and set them as the `STRIPE_PUBLISHABLE` and `STRIPE_SECRET` environment variables in the `.bashrc` file within my local workspace.
+10. Updated the `settings.py` with the new Stripe environment variables.
+8. Went to the **S3** section of AWS and created a new S3 bucket.
+9. Within the relevant bucket's permissions, changed the **CORS Configuration** to the following:
+
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+    <CORSRule>
+        <AllowedOrigin>*</AllowedOrigin>
+        <AllowedMethod>GET</AllowedMethod>
+        <AllowedMethod>HEAD</AllowedMethod>
+        <MaxAgeSeconds>3000</MaxAgeSeconds>
+        <AllowedHeader>Authorization</AllowedHeader>
+    </CORSRule>
+    </CORSConfiguration>
+    ```
+
+10. Still in the **S3** section, changed the **Bucket Policy** to the following:
+
+    ```
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "PublicReadGetObject",
+                "Effect": "Allow",
+                "Principal": "*",
+                "Action": "s3:GetObject",
+                "Resource": "arn:aws:s3:::<my-bucket-name>/*"
+            }
+        ]
+    }
+    ```
+
+11. Replaced the `<my-bucket-name>` in the `Resource` line with my S3 bucket's name instead.
+12. Went to the **IAM** section of AWS, created a 'New Group' and attached my S3 bucket details to it.
+13. Still in the **IAM** section, created a 'New Policy' and a 'New User' and attached these to the newly created group.
+14. Updated the `settings.py` file in my local workspace with the relevant S3 bucket details:
+
+    ```
+    AWS_S3_OBJECT_PARAMETERS = {
+        "Expires": "Thu, 31 Dec 2099 20:00:00 GMT",
+        "CacheControl": "max-age=94608000",
+    }
+    AWS_STORAGE_BUCKET_NAME = "<s3-bucket-name>"
+    AWS_S3_REGION_NAME = "<region-name>"
+    AWS_ACCESS_KEY_ID = <access-key-id>
+    AWS_SECRET_ACCESS_KEY = <secret-access-key>
+    AWS_S3_CUSTOM_DOMAIN = "%s.s3.amazonaws.com" % AWS_STORAGE_BUCKET_NAME
+    AWS_DEFAULT_ACL = None
+    ```
+
+15. Created a `custom_storages.py` file with classes to route to the relevant location settings for static and media files.
+16. Updated the `settings.py` file with the relevant configuration for static and media file storage.
+17. Ran the `python3 manage.py collectstatic` command to push the static files to my S3 bucket.
+18. Created a requirements.txt file using the following command in the terminal window:
+
+    ```sudo pip3 freeze --local > requirements.txt```
+
+19. Created a Procfile using the following command in the terminal window:
+
+    ```echo web: gunicorn UnicornAttractor.wsgi:application > Procfile```
+
+20. Ran the `git add .`, `git commit -m "<commit-message>"` and `git push` commands to push all changes to my GitHub repository.
+
+The app was successfully deployed to Heroku at this stage.
 ### Credits
 
 ## Code

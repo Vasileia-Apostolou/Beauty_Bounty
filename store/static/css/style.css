@@ -140,8 +140,7 @@ body {
 }
 
 .login-button {
-    margin-left: 45%;
-    margin-top: 5%;
+    margin: 5px auto;
     background-color: black;
     color: white !important;
 }
