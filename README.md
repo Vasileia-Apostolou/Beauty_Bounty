@@ -75,9 +75,14 @@ To create this project's wireframes I used [Balsamiq](https://balsamiq.com/).
 
 During the development process some changes were made.
 
-*
-*
-*
+* [Home](https://github.com/Vasileia-Apostolou/Beauty_Bounty/blob/master/store/static/wireframes/Home%20Page.pdf)
+* [All Products](https://github.com/Vasileia-Apostolou/Beauty_Bounty/blob/master/store/static/wireframes/All%20Products.pdf)
+* [Product Details](https://github.com/Vasileia-Apostolou/Beauty_Bounty/blob/master/store/static/wireframes/Product.pdf)
+* [Cart](https://github.com/Vasileia-Apostolou/Beauty_Bounty/blob/master/store/static/wireframes/Cart.pdf)
+* [Completed Order](https://github.com/Vasileia-Apostolou/Beauty_Bounty/blob/master/store/static/wireframes/Thank%20You.pdf)
+* [Order Details](https://github.com/Vasileia-Apostolou/Beauty_Bounty/blob/master/store/static/wireframes/Order%20Details.pdf)
+* [Register/Login](https://github.com/Vasileia-Apostolou/Beauty_Bounty/blob/master/store/static/wireframes/Register:Login.pdf)
+* [Search](https://github.com/Vasileia-Apostolou/Beauty_Bounty/blob/master/store/static/wireframes/Search.pdf)
 
 ### Design
 I wanted to keep my website clean, fresh and sophisticated. I used a lavender color for the navbar and footer to add some character but kept everything else white. Navbar brand and icons were given a deep almost black-looking purple. Typography is "Great Vibes" for the navbar brand and "Quicksand" for the body html code. 
