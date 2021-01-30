@@ -32,5 +32,28 @@ Product
             </div>
         </div>
     </div>
+
+    <!--Product Reviews-->
+    <div class="card">
+        <div class="card-header">
+            Reviews
+        </div>
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form group">
+                    <textarea name="content" id="" cols="30" rows="10"></textarea>
+
+
+                </div>
+
+            </form>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </div>
 </div>
 {% endblock %}

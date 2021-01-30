@@ -342,7 +342,7 @@ footer {
    /* background: url("../images/navbar1.jpg"); */
    color: black;
    text-align: center;
-   padding-top: 50px; 
+   padding-top: 30px; 
 }
 
 .copyright {
@@ -383,12 +383,22 @@ footer {
 }
 
 .socials li a i {
-    /* margin-left: 30px;
+    /* margin-left: 30px;*/
     font-size: 30px;
-    color: #391066;*/
+    /* justify-content: space-between; */
+    color: #391066;
     text-shadow: 0px 0px 1px #9e62d9; 
     
 }
+
+footer ul{
+  justify-content:space-evenly;
+  text-align:center;
+}
+
+footer ul li{
+  display:inline-block;
+ }
 
 .socials li a i:hover{
     color: #541e73;
