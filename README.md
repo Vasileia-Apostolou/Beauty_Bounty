@@ -213,6 +213,7 @@ Click the link below to visit my project's GitHub repository:
 
 * [Beauty Bounty Repository](https://github.com/Vasileia-Apostolou/Beauty_Bounty)
 
+
 I used GitHub for my version control and Heroku to host the live version of my project. To deploy my website to Heroku, I used the following steps:
 
 1. Created the app in Heroku.
@@ -291,6 +292,43 @@ I used GitHub for my version control and Heroku to host the live version of my p
 20. Ran the `git add .`, `git commit -m "<commit-message>"` and `git push` commands to push all changes to my GitHub repository.
 
 The app was successfully deployed to Heroku at this stage.
+
+### Running Code Locally
+
+To run my code locally, users can download a local copy of my code to their desktop by completing the following steps:
+
+1. Go to [my GitHub repository](https://github.com/Vasileia-Apostolou/Beauty_Bounty)
+2. Click on 'Clone or download' under the repository name.
+3. Copy the clone URL for the repository in the 'Clone with HTTPs section'.
+4. Open 'Git Bash' in your local IDE.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, then paste the URL you copied in Step 3:
+
+    ```git clone https://github.com/USERNAME/REPOSITORY```
+
+7. Press `Enter` to complete the process and create your local clone.
+8. Complete one of the two below steps in your local workspace to set your own credentials for the environment variables:
+    - Enter and save your own credentials in the `.baschrc` file; or
+    - Create a `.env,py` file with your own credentials and import this into the `settings.py` file
+9. Install the `requirements.txt` file by running the below command in your CLI Terminal:
+
+    ```sudo pip3 install -r requirements.txt```
+
+10. Run one of the following commands in your Terminal to launch the Django project:
+
+    ```python3 manage.py runserver```
+
+11. Click the `http://` link that loads, and the project should load. If it doesn't load when you click the link, copy and paste it into a new browser tab instead.
+12. Run the following commands to migrate the database models and create a super user:
+
+    ```
+    python3 manage.py makemigrations
+    python3 manage.py migrate
+    python3 manage.py createsuperuser
+    ```
+
+Once the migrations are completed and the super user has been created successfully, the site should be running locally. To deploy the site remotely, follow the instructions in the [Deployment](#Deployment) section.
+
 ### Credits
 
 ## Code
