@@ -201,6 +201,11 @@ Chrome DevTools is a set of web developer tools built directly into the Google C
 * max product quantity
 
 ### Deployment
+## Live App Link 
+Click the link below to run my project in the live environment:
+
+* [Beauty Bounty](https://beauty-bounty.herokuapp.com/)
+
 I used GitHub for my version control and Heroku to host the live version of my project. To deploy my website to Heroku, I used the following steps:
 
 1. Created the app in Heroku.
