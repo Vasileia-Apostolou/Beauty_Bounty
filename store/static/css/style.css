@@ -120,8 +120,11 @@ body {
     /* background: url("../images/button6.jpg"); */
     text-decoration: none;
     color: white;
-    margin-left: 45%;
-    margin-bottom: 5%;
+    margin: 5px auto;
+}
+
+.button-div {
+    margin: 5px auto;
 }
 
 .start-shopping-button:hover {
@@ -156,6 +159,11 @@ body {
     color: white;
 }
 
+.post-button {
+    background-color: b !important;
+    color: #fcdcf8 !important;
+
+}
 
 /* -------- ABOUT -------- */
 .about-text {
@@ -330,6 +338,19 @@ background-size: cover;
     margin-top: 2%;
 }
 
+/* -------- REVIEWS --------*/
+.reviews-cart {
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+
+.reviews-header {
+    background: url("../images/navbar5.jpg");
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
 /* -------- FOOTER --------*/
 footer {
    margin-top: auto;
@@ -345,10 +366,10 @@ footer {
    padding-top: 30px; 
 }
 
-.copyright {
+/* .copyright {
     margin-right: 45px;
     float: right;
-}
+} */
 
 .contact-footer-text,
 .connect-footer-text {
@@ -481,6 +502,12 @@ footer ul li{
 
 
 /* ------- MEDIA QUERIES ---------*/
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 768px) {
+    .copyright {
+    float: right;
+    margin-right: 45px; 
+    
+}
+
     
 }

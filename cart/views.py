@@ -37,6 +37,22 @@ def add_cart(request, product_id):
         cart_item.save()
     return redirect('cart_detail')
 
+# PRODUCT
+def product(request, category_slug, product_slug):
+    try:
+        product = Product.objects.get(
+            category__slug=category_slug, slug=product_slug)
+    except Exception as e:
+        raise e
+
+    if request.method == 'POST' and request.user.is_authenticated and request.POST['content'].strip() != '':
+        Review.objects.create(product=product,
+                              user=request.user,
+                              content=request.POST['content'])
+    reviews = Review.objects.filter(product=product)
+    return render(request, 'store/product.html',
+                  {'product': product, 'reviews': reviews})
+
 
 # CART USER'S INFORMATION
 def cart_detail(request, total=0, counter=0, cart_items=None, slug=None):
