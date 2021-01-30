@@ -20,11 +20,10 @@ body {
 
 .navbar-brand {
     text-align: center;
-    font-size: 32px;
+    font-size: 35px;
     font-family: "Great Vibes", fantasy;
     margin-left: 20px;
-    color: #391066;
- 
+    color: #391066 !important;
 }
 
 .navbar-brand:hover {
@@ -51,7 +50,7 @@ body {
 } */
 
 .free-delivery-banner {
-    background-color: #982bd6;
+    background-color: black;
     color: #ffffff;
 }
 
@@ -96,6 +95,11 @@ body {
     width: 50%;
     margin-left: 25%;
     border-radius: 10%;
+}
+
+.home_div img {
+    margin: 1px auto;
+    width: 100%;
 }
 
 /* -------- BUTTONS ---------*/ 
@@ -244,16 +248,6 @@ background-size: cover;
 
 
 /* ------- COMPLETED ORDER PAGE ---------*/
-.thank-you-text {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 22px;
-    font-weight: bold;
-    padding-top: 5%;
-    padding-bottom: 4%;
-}
-
 .order-number-text,
 .confirmation-text {
     text-align: center;
@@ -297,17 +291,18 @@ background-size: cover;
    text-shadow: 0px 0px 1px #5b4b5e;
 }
 
-/* ------- REGISTRATION FORM ---------*/
+/* ------- LOGIN & REGISTRATION ---------*/
 .errorlist li {
     color: blue;
     font-weight: bold;
 } 
 
-.new-account-text {
+.new-account-text,
+.existing-customers-text {
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
+    letter-spacing: 4px;
+    font-size: 25px;
     font-weight: bold;
     padding-bottom: 5%;
 }
@@ -319,18 +314,14 @@ background-size: cover;
     margin-top: 3%;
 }
 
-/* -------- LOGIN FORM --------*/
 .existing-customers-text {
     text-align: center;
     margin-top: 11%;
 }
 
-/* .text-center {
-    margin-top: 7%;
-} */
-
 .register-now-text {
     text-align: center;
+    text-transform: uppercase;
     font-size: 20px;
     margin-top: 2%;
 }
@@ -399,8 +390,6 @@ footer {
     text-shadow: 0px 0px 1px #982bd6;
 }
 
-
-/* add to cart_style.css */
 /* ------ CART --------*/
 .thead-text {
     text-align: center;
@@ -478,22 +467,5 @@ footer {
 
 /* ------- MEDIA QUERIES ---------*/
 @media only screen and (max-width: 800px) {
-    .home-image {
-        margin-top: 25%;
-        padding-left: 5%;
-        border-radius: 10%;
-    }
-
-    .welcome-img {
-    width: 50%;
-    margin-left: 20%;
-    margin-top: 5%; 
-}
-
-.shopping-cart-text {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 25px;
- 
-}
+    
 }
