@@ -354,7 +354,9 @@ The shipping/billing address info is not displaying in the "View Order" table. A
 The web application's HTML and CSS code has been tested in [W3C Validator](https://validator.w3.org/). The JavaScript code has been tested in [JS Hint](https://jshint.com/). Python syntax has been tested in [Pep8 Online Tool](http://pep8online.com/) and responsiveness in this [Mobile-Friendly Test](https://search.google.com/test/mobile-friendly).
 
 * My Python code passed the validator, except a few lines with the "line too long" warning.
+* My HTML code passed the validator, except the errors that were cause by template language.
 * My CSS code passed the validator.
+
 
 ## Deployment
 
