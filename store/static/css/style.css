@@ -502,9 +502,11 @@ footer ul li{
     float: right;
     margin-right: 45px; 
 }   
+}
+
+@media only screen and (max-width: 767px) { 
 
 .product-name {
     margin-top: 30px;
 }
-
 }

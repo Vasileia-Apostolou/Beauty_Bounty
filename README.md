@@ -274,6 +274,9 @@ or
 
 ## Manual Testing
 
+* I tested that the navbar brand(Beauty Bounty) redirects user to the home page.
+* I tested that the navbar collapses to a hamburger menu in smaller screen devices.
+* I tested that the search bar shows the user a product related to the word they typed.
 * I tested the registration form by creating several fake user accounts with a username, email address, password and tested the "Submit" button.
 * I logged in from several fake user accounts using the username and password and tested the "Login" button.
 * I tested the log out funtion from all accounts by clicking on the "Logout" button.
@@ -281,7 +284,19 @@ or
 * I tested that all "Go back" buttons takes user to the home page.
 * I tested that "Products" link in the navbar takes user to the all products page.
 * I tested that when a user clicks on a specific product, it takes them to the product details page.
-* 
+* I tested that the "Add To Cart" button add the product into the users cart
+* I tested that if the product has less than 200 in stock, a "Low In Stock" text will appear.
+* I tested that if the product stock is 0, a "Out Of Stock" text will appear.
+* I tested on the cart page, that if the "+" icon is clicked, the product quantity is increasing.
+* I tested on the cart page, that if the "-" icon is clicked, the product quantity is decreasing.
+* I tested on the cart page, that if the bin icon is clicked, the product quantity is being removed from the cart.
+* I tested that the "Pay With Card" button brings up a form where the user has to fill in with personal details such as shipping/billing address and credit card details.
+* I tested that when a payment goes through, a user is taken to a "Thank You For Your Order" page.
+* I tested that in the "Thank You For Your Order" if the user is logged in, the user can click on "Click here to view order history" which will redirect to the "Order History" page.
+* I tested that in the "Thank You For Your Order" if the user is logged out or not registered, the user can click on "To view order history click here to register" to register in order to view order history.
+* I tested that in the "Order History" page the user can see the Order number, date, price, total amount spent, status and view order(action).
+* I tested that in the "View Order" page the user can see order details.
+* I tested that the "Print" button in the "View Order" page will give the user the option of printing/downloading the order details table.
 
 
 ### Resolved Bugs
