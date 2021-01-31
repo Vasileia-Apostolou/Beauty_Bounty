@@ -418,6 +418,10 @@ footer ul li{
 }
 
 /* ------ CART --------*/
+
+.card-page {
+    margin-bottom: 30px;
+}
 .thead-text {
     text-align: center;
     text-transform: uppercase;
@@ -482,7 +486,7 @@ footer ul li{
     color: white;
     float: right;
     margin-right: 18%;
-    /* margin-bottom: 20px; */
+    margin-top: 18px;
 }
 
 .add-to-card-button {

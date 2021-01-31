@@ -207,7 +207,36 @@ This web application was tested in the following browsers to ensure the web appl
  * Huawei Mediapad T5
  * MacBook Pro
 
-### Resolved
+### Testing User Stories
+- **As a user, I want to be able to look at all the app's products**
+1. Click on "Products" link on the navbar.
+
+- **As a user, I want to be able to search for a specific product**
+1. Type a word related to the product you are looking for.
+2. Click on the "Search" button.
+
+- **As a user, I want to be able view product information**
+1. Click on the product you would like to get more information about
+
+
+
+
+* View product information
+* View my cart item(s)
+* Add a product to my cart
+* Increase/Decrease the quantity of the product I am interested in purchasing
+* Delete a product from my cart
+* View order summary and total before proceeding with the payment
+* Purchase the added cart item(s) with my credit card details
+* Have a shipping or billing address option
+* Get a confirmation when my payment goes through
+* Get a notification if my payment doesn't go through
+* Create my personal account
+* Login/Logout of my personal account
+* Contact costumer service via email or call
+* Connect with the people of Beauty Bounty through social media 
+
+### Resolved Bugs
 * -icons floating
 * SECRET KEY EXPOSED! x2
 * POSTGRES URI Exposed, destroyed database
