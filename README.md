@@ -215,26 +215,62 @@ This web application was tested in the following browsers to ensure the web appl
 1. Type a word related to the product you are looking for.
 2. Click on the "Search" button.
 
-- **As a user, I want to be able view product information**
+- **As a user, I want to be able to view product information**
 1. Click on the product you would like to get more information about
 
+- **As a user, I want to be able to view my cart item(s)**
+1. Click on the cart icon in the navbar
 
+- **As a user, I want to be able to add a product to my cart**
+1. Click on the product you would like to add to your cart
+2. Click on "Add To Cart" button
 
+- **As a user, I want to be able to increase/decrease the quantity of the product I am interested in purchasing**
+1. Click on the + icon if you want to increase the quantity
 
-* View product information
-* View my cart item(s)
-* Add a product to my cart
-* Increase/Decrease the quantity of the product I am interested in purchasing
-* Delete a product from my cart
-* View order summary and total before proceeding with the payment
-* Purchase the added cart item(s) with my credit card details
-* Have a shipping or billing address option
-* Get a confirmation when my payment goes through
-* Get a notification if my payment doesn't go through
-* Create my personal account
-* Login/Logout of my personal account
-* Contact costumer service via email or call
-* Connect with the people of Beauty Bounty through social media 
+or
+
+1. Click on the - icon if you want to decrease the quantity
+
+- **As a user, I want to be able to delete a product from my cart**
+1. Click on the bin icon if you want to remove the product from your cart
+
+- **As a user, I want to be able to view order summary and total before proceeding with the payment**
+1. Go to your cart
+
+- **As a user, I want to be able to purchase the added cart item(s) with my credit card details**
+1. Go to your cart
+2. Click on "Pay With Card"
+3. Fill in your personal information
+4. Click "Pay"
+
+- **As a user, I want to be able to Have a shipping or billing address option**
+1. Go to your cart
+2. Click on "Pay With Card"
+3. Choose shipping or billing address section
+
+- **As a user, I want to be able to Have a shipping or billing address option**
+1. Click on the user icon in the navbar.
+2. Click on "Create Account"
+2. Fill in the Register Form with a username, email address and password.
+3. Click on "Submit" button.
+
+- **As a user, I want to be able to log in and out of my personal account.** 
+* LOGIN 
+1. Click on the user icon in the navbar.
+2. Fill in the Login Form with your username and password.
+3. Click on the "Login" button. 
+* LOGOUT 
+1. Click on the "Logout" link in the navbar.
+
+- **As a user, I want to be able to contact costumer service via email or call.** 
+1. Go to the bottom of the page
+2. Contact phone number and email address are being displayed.
+* Click on the email address to open a form
+
+- **As a user, I want to be able to connect with the people of Beauty Bounty through social media.** 
+1. Go to the bottom of the page
+2. Social media links are being displayed and can be clicked
 
 ### Resolved Bugs
 * -icons floating
