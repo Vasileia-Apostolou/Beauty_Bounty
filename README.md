@@ -319,15 +319,11 @@ In the cart page, when a product was reaching maximum in-stock quantity, the "+"
 
 - **Secret Key Exposed** 
 
-During the development proccess, I realised that I have exposed the stripe secret key, along with the database ProgresSQL URI. After I contacted tutor support, I have been advised to destroy the database and create a new one. As fas as the stripe key, I hide it in an env.py file and include it to the .gitignore file.
+During the development proccess, I realised that I have exposed the stripe secret key, along with the database ProgresSQL URI. After I contacted tutor support, I have been advised to destroy the database and create a new one. As fas as the stripe key, I hid it in an env.py file and include it to the .gitignore file.
 
+- **Cart App** 
 
-
-
-* POSTGRES URI Exposed, destroyed database
-* created cart - deleted database - reupload products
-* sqlite3
-* max product quantity
+During the development process, because I have destroyed the database, I had to re-create a superuser, users and re-upload the product manually through the admin panel.
 
 ### Unresolved Bugs 
 
@@ -339,6 +335,7 @@ In the navbar there is a "categories" element which is not functioning properly.
 
 In the stripe payment form, the billing address section will not allow the user to proceed, instead it will automatically take them to the shipping address section. 
 
+- **Search** 
 
 
 ### Code Validators 
