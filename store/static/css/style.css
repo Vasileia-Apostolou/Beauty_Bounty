@@ -115,15 +115,12 @@ body {
     margin-bottom: 5%;
 }
 
-.start-shopping-div {
-    text-align: center;
-}
-
-/* .start-shopping-button {
+.start-shopping-button {
     background-color: #373238;
     text-decoration: none;
     color: white;
-} */
+    margin-bottom: 5%;
+}
 
 .start-shopping-button:hover {
     background-color: #5b4b5e;
@@ -134,15 +131,18 @@ body {
 }
 
 .new-account-button {
-    margin-left: 37%;
     background-color: black;
     color: white !important;
 }
 
 .login-button {
-    margin: 5px auto;
+    justify-content: space-around;
     background-color: black;
     color: white !important;
+}
+
+.center-align {
+    text-align: center;
 }
 
 .go-back-button-2 {

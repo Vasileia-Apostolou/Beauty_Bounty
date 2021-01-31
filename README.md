@@ -332,13 +332,22 @@ Once the migrations are completed and the super user has been created successful
 ### Credits
 
 ## Code
-* Dropdown menu was taken from [W3 Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_hover).
+* Dropdown menu was taken from [W3 Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_hover)
 * Checkout code taken from Stripe
-* Hide + code taken from slack overflow
+* Navbar HTML code was taken from [Bootstrap](https://getbootstrap.com/)
 
 ## Media
+None of the images belong to me.
+
+* The project's products were taken from different online stores such as [Colorpop](https://colourpop.com/products/making-mauves-mauve-eyeshadow-palette), [Fenty Beauty](https://www.fentybeauty.com/), [Kylie Skin](https://kylieskin.com/), [Huda Beauty](https://hudabeauty.com/), [Valentino](https://www.valentino.com/en-no) and [Giorgio Armani](https://www.armani.com/dk/armanicom).
+* Home Page image was taken from a [google search](https://www.google.com/search?q=lashes+gif&tbm=isch&ved=2ahUKEwip07iq7cTuAhXVOuwKHfS3CHMQ2-cCegQIABAA&oq=lashes+gif&gs_lcp=CgNpbWcQAzIECCMQJzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgYIABAHEB46CAgAEAcQBRAeUL-vAViKtgFg4LgBaABwAHgAgAFZiAHxApIBATaYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=kfEVYOnGLdX1sAf076KYBw&bih=789&biw=834&rlz=1C5CHFA_enDK875DK875#imgrc=3cY72nhKokE9FM)
+* Navbar background image was taken from a [google search](https://www.google.com/search?q=pink+and+gold+marble+background&tbm=isch&ved=2ahUKEwjLhaK27cTuAhUMs6QKHWzrCYcQ2-cCegQIABAA&oq=pink+&gs_lcp=CgNpbWcQARgAMgQIIxAnMgQIIxAnMgQIABBDMgQIABBDMgQIABBDMgQIABBDMgQIABBDMgQIABBDMgQIABBDMgQIABBDOgIIAFCP6QNYyvADYO_9A2gAcAB4AIABV4gB0AKSAQE1mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=qvEVYMuIIYzmkgXs1qe4CA&bih=789&biw=834&rlz=1C5CHFA_enDK875DK875)
+* "Thank you for your order" image was taken from a [google search](https://www.google.com/search?q=thank+you+for+your+order+&tbm=isch&ved=2ahUKEwiryobA8MTuAhVBtaQKHShXD5UQ2-cCegQIABAA&oq=thank+you+for+your+order+&gs_lcp=CgNpbWcQAzIECCMQJzIECCMQJzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAUJQrWJQrYK8saABwAHgAgAE8iAE8kgEBMZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=5PQVYKvIFsHqkgWorr2oCQ&bih=789&biw=834&rlz=1C5CHFA_enDK875DK875#imgrc=OT8KJGkAUvUJ7M)
+* "Hello Beautiful* image was taken from a [google search](https://www.google.com/search?q=hello+beautiful+pink&tbm=isch&ved=2ahUKEwiG8bHD8MTuAhVEs6QKHQTPAS0Q2-cCegQIABAA&oq=hello+bea&gs_lcp=CgNpbWcQARgAMgQIIxAnMgQIIxAnMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BAgAEENQzcMEWJjPBGDq2wRoAHAAeACAAUiIAaYEkgEBOZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=6_QVYMbPFsTmkgWEnofoAg&bih=789&biw=834&rlz=1C5CHFA_enDK875DK875#imgrc=U-NPJr20WTz5TM)
 
 ## Acknowledgements
-* Tutor Assistance
-* Mentor
-* Slack Overflow
+* Overall project and README file was inspired by [this](https://github.com/hebs87/unicorn-attractor-milestone-four/blob/master/README.md#Deployment) project
+* Most of this project's functionality was taken from [this Udemy course](https://www.udemy.com/course/build-ecommerce-website-to-master-django-and-python/learn/lecture/16779602?start=0#content)
+* Code Institute's Tutor assistance has helped my a lot in solving and understanding the cause of the errors and issues I was facing
+* Special thanks to my mentor Gerard McBride 
+* [Slack Overflow](https://stackoverflow.com/) has been very helpful for solving errors
