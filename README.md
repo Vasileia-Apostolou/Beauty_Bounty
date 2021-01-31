@@ -90,13 +90,13 @@ The app is using Python logic to allow users to register or login/logout to thei
 
 ### Existing Features
 - **Navbar** -
-The navbar includes 5 links(categories) such as All Products, Brands, New, Best Sellers and Fragrances. Additionally it includes a user icon which will redirect user to a Register/Login page, a search icon which gives users the ability to search a specific product and a cart icon which redirects users to the checkout page.
+The navbar includes 3 links such as Home, Products and Categories. Additionally it includes a user icon which will redirect user to a Register/Login page, a search icon which gives users the ability to search a specific product and a cart icon which redirects users to the checkout page.
 
 - **Search** -
-The search bar allows the user to type any word(s) related to the product they are searching for. If there's any product(s) corresponding to their search, the product(s) will appear in a separate page. If there's is no product corresponding to their search, a message will appear stating "No Products Found".
+The search bar allows the user to type any word(s) related to the product they are searching for. If there's any product(s) corresponding to their search, the product(s) will appear in a separate page.
 
-- **All Products** -
-Users can view all the app's products both in-stock and out-of-stock by clicking on "All Products" in the navbar. The products are being displayed in an alphabetical order. Each product has an image, name, price and it's clickable so that users can see further details about the product they are interested in.
+- **Products** -
+Users can view all the app's products both in-stock and out-of-stock by clicking on "Products" in the navbar. The products are being displayed in an alphabetical order. Each product has an image, name, price and it's clickable so that users can see further details about the product they are interested in.
 
 - **View Product** -
 The user can click on a specific product to view product details. It will take the user to a new page where by the product name, price and description will be displayed. If the product is in-stock there will be an "Add To Cart" button which if clicked, will take the user to their cart, but if the product is out-of-stock there will be no action but a heading stating "Out Of Stock".
@@ -105,25 +105,28 @@ The user can click on a specific product to view product details. It will take t
 The user can see reviews that other users have left. In order to post a review the user needs to have an account. If the user doesn't have an account, posting a review is not an option.
 
 - **Cart** -
-In the cart we have two sections. Items section and Checkout section. In the items section is the order summary. The products that were added to the cart by the user are being displayed along with their name, price and quantity set to 1 by default. However, the user is able to increase or decrease the quantity by clicking on the + or - icon accordingly, or delete the product from their cart by clicking on the bin icon. If the product is no longer in-stock, the + icon will disappear leaving the user with no choice of increasing the product quantity. The total of each product is being calculated next to it(eg. 100x1 = $100 or 100x3 = $300). On the checkout section the total amount of all products are being calculated and the user can proceed with the payment by clicking on the "Pay With Card" button. Once the button is clicked a form will appear where by the user will have to fill in personal information such as shipping or billing address and credit card details. 
+In the cart we have two sections. Items section and Checkout section. In the items section is the order summary. The products that were added to the cart by the user are being displayed along with their name, price and quantity set to 1 by default. However, the user is able to increase or decrease the quantity by clicking on the + or - icon accordingly, or delete the product from their cart by clicking on the bin icon. If the product is no longer in-stock, the + icon will disappear leaving the user with no choice of increasing the product quantity, and a "Out Of Stock" text will appear instead. The total of each product is being calculated next to it (eg. 100x1 = $100 or 100x3 = $300) depending on the quantity. On the checkout section the total amount of all products are being calculated and the user can proceed with the payment by clicking on the "Pay With Card" button. Once the button is clicked a form will appear where by the user will have to fill in personal information such as shipping or billing address and credit card details. 
 
 - **Completed Order** -
-If the payment goes through successfully, the user will be taken to the "Thank You" page. The "Thank You" page includes an images stating "Thank You for your order", the order number underneath the image and a "Continue Shopping" button.
+If the payment goes through successfully, the user will be taken to the "Thank You" page. The "Thank You" page includes an images stating "Thank You for your order". Additionally, users who are registered and logged in can click on a link below where by it will redirect them to the order history page. Users who are not registered and logged in can click on a link below where by it will redirect them to the registration page.
 
 - **User Profile / Order History** -
-In the user profile there is an order history table with the orders number, data, amound spent, and action. In the action column is an anchor element "View Order".
+In the users profile there is an order history table with the orders number, data, amound spent, status and action. In the action column is an anchor element "View Order". Only users who are registered have access to their order history page. 
+
+- **View Order**
+In the "View Order" page there is a table with the order details.
 
 - **Register** -
-Users can create their own account for free by clicking on the user icon in the search bar which will take them to a page with register or login section. In the register section the user will have to click on the "Create New Account" button which will take them to the register page where by the user will have to fill a form with their personal details (Name, Surname, Username, Email Address, Password, Repeat Password). Once the form is correctly filled and the "Submit" button is clicked, a new account will be created. If the form is filled incorrectly (wrong password match) the user cannot continue and create an account.
+Users can create their own account for free by clicking on the user icon in the search bar which will take them to a page with register or login section. In the register section the user will have to click on the "Create New Account" button which will take them to the register page where by a form had to be filled in with their personal details (Name, Surname, Username, Email Address, Password, Repeat Password). Once the form is correctly filled in and the "Submit" button is clicked, a new account will be created. If the form is filled incorrectly (wrong password match) the user cannot proceed and create an account.
 
 - **Welcome Page** -
 When a new account is successfully created the user will be taken to the Welcome page. In the Welcome page there is a "Hello Beautiful" image with a heading underneath stating "Welcome to Beauty Bounty!" and a "Start Shopping!" button. 
 
 - **Login** -
-Users can login in their account by clicking on the user icon in the search bar which will take them to a page with register or login section. The login form has a username and password field which if correctly filled the will be successfully logged in and taken to the home page.
+Users can login in their account by clicking on the user icon in the search bar which will take them to a page with register or login section. The login form has a username and password field which if correctly filled, the user will be successfully logged in and taken to the home page.
 
 - **Logout** -
-Users and logout from their account by clicking on "Logout" in the navbar. Users will then be redirected to the register/login page.
+Users can logout from their account by clicking on "Logout" in the navbar. Users will then be redirected to the register/login page.
 
 - **Footer** -
 The footer includes two sections. A contact section with a clickable email address which opens up an email form in a new tab and a phone number with a paragraph that shows operating hours. Plus a connect section with social media links.
@@ -145,9 +148,13 @@ In the future, I would like to add a navbar dropdown menu where by the users can
 
 In the future, I would like to add a "Best Sellers" navbar item where by it will display the best selling products of Beauty Bounty.
 
-- **NEW**
+- **New**
 
 In the future, I would like to add a "New" navbar item where by it will display the all the new products that were added in Beauty Bounty.
+
+- **Email Confirmation**
+
+In the future, I would like to add a function that sends an order email confirmation to the email address that the user has provided.
 
 ## Technologies Used
 
@@ -305,12 +312,37 @@ or
 
 
 ### Resolved Bugs
-* -icons floating
-* SECRET KEY EXPOSED! x2
+
+- **Plus Icon**
+
+In the cart page, when a product was reaching maximum in-stock quantity, the "+" icon was floating on top of the table. I realised that this was caused because in the else-block I haven't defined a table cell.
+
+- **Secret Key Exposed** 
+
+During the development proccess, I realised that I have exposed the stripe secret key, along with the database ProgresSQL URI. After I contacted tutor support, I have been advised to destroy the database and create a new one. As fas as the stripe key, I hide it in an env.py file and include it to the .gitignore file.
+
+
+
+
 * POSTGRES URI Exposed, destroyed database
 * created cart - deleted database - reupload products
 * sqlite3
 * max product quantity
+
+### Unresolved Bugs 
+
+- **Categories** 
+
+In the navbar there is a "categories" element which is not functioning properly.
+
+- **Stripe Billing Address** 
+
+In the stripe payment form, the billing address section will not allow the user to proceed, instead it will automatically take them to the shipping address section. 
+
+
+
+### Code Validators 
+The web application's HTML and CSS code has been tested in [W3C Validator](https://validator.w3.org/). The JavaScript code has been tested in [JS Hint](https://jshint.com/). Python syntax has been tested in [Pep8 Online Tool](http://pep8online.com/) and responsiveness was tested in [Resposinator](https://www.responsinator.com/), [Am I Responsive](http://ami.responsivedesign.is/) and [Mobile-Friendly Test](https://search.google.com/test/mobile-friendly).
 
 ## Deployment
 

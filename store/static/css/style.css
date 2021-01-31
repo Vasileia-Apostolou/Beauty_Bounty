@@ -80,9 +80,9 @@ body {
 }
 
 .start-shopping-button {
-    background-color: #373238;
+    background-color: black;
     text-decoration: none;
-    color: white;
+    color: #fcdcf8;
     margin-bottom: 5%;
 }
 
@@ -96,13 +96,13 @@ body {
 
 .new-account-button {
     background-color: black;
-    color: white !important;
+    color: #fcdcf8  !important;
 }
 
 .login-button {
     justify-content: space-around;
     background-color: black;
-    color: white !important;
+    color: #fcdcf8  !important;
 }
 
 .center-align {
@@ -111,7 +111,7 @@ body {
 
 .go-back-button-2 {
     background-color: black !important;
-    color: white !important;
+    color: #fcdcf8  !important;
 }
 
 .start-shopping-button:hover,
@@ -206,6 +206,7 @@ background-size: cover;
 .card-footer {
     text-align: center;
     background: transparent;
+    border: none;
 }
 
 .all-products-text {
@@ -427,23 +428,19 @@ footer ul li{
 
 /* ------- BUTTONS -------- */
 .stripe-button-el {
-    background-color: black !important;
-    color: white !important;
     margin-left: 50px;
     margin-top: 20px;
 }
 
 .stripe-button-el span { 
     height: 35px !important;
-    background-color: black !important;
-    color: white !important;
     font-family: "Quicksand", sans-serif !important;
     font-size: 16px !important;
 }
 
 .go-back-button {
     background-color: black;
-    color: white;
+    color: #fcdcf8;
     float: right;
     margin-right: 18%;
     margin-top: 18px;
@@ -452,7 +449,7 @@ footer ul li{
 .add-to-card-button {
     margin-left: 37%;
     background-color: black;
-    color: white !important;
+    color: #fcdcf8  !important;
 }
 
 
