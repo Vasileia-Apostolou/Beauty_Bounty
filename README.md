@@ -272,6 +272,18 @@ or
 1. Go to the bottom of the page
 2. Social media links are being displayed and can be clicked
 
+## Manual Testing
+
+* I tested the registration form by creating several fake user accounts with a username, email address, password and tested the "Submit" button.
+* I logged in from several fake user accounts using the username and password and tested the "Login" button.
+* I tested the log out funtion from all accounts by clicking on the "Logout" button.
+* I tested that the about section is being displayed in the "Home" page.
+* I tested that all "Go back" buttons takes user to the home page.
+* I tested that "Products" link in the navbar takes user to the all products page.
+* I tested that when a user clicks on a specific product, it takes them to the product details page.
+* 
+
+
 ### Resolved Bugs
 * -icons floating
 * SECRET KEY EXPOSED! x2

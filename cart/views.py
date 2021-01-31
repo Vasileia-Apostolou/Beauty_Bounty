@@ -37,6 +37,7 @@ def add_cart(request, product_id):
         cart_item.save()
     return redirect('cart_detail')
 
+
 # PRODUCT
 def product(request, category_slug, product_slug):
     try:

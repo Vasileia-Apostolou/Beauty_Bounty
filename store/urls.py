@@ -13,4 +13,3 @@ urlpatterns = [
     path('search/', views.search, name='search'),
     path('order/<int:order_id>', views.viewOrder, name='view_order'),
 ]
-

@@ -32,12 +32,10 @@
                 {% endif %}
 
                 {% if item_count > 0 %}
-                <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="{% url 'cart_detail' %}"
-                        data-toggle="dropdown"><i class="fas fa-shopping-bag navbar-icons"></i> ({{item_count}})</a>
+                <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="{% url 'cart_detail' %}"><i class="fas fa-shopping-bag navbar-icons"></i> ({{item_count}})</a>
                 </li>
                 {% else %}
-                <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="{% url 'cart_detail' %}"
-                        data-toggle="dropdown"><i class="fas fa-shopping-bag navbar-icons"></i></a>
+                <li class="nav-item"><a class="nav-link px-3 hvr-bounce-in" href="{% url 'cart_detail' %}"><i class="fas fa-shopping-bag navbar-icons"></i></a>
                     {% endif %}
                 </li>
                
