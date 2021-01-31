@@ -342,9 +342,12 @@ In the navbar there is a "categories" element which is not functioning properly.
 
 - **Stripe Billing Address** 
 
-In the stripe payment form, the billing address section will not allow the user to proceed, instead it will automatically take them to the shipping address section. 
+In the stripe payment form, the billing address section will not allow the user to proceed, instead it will automatically take them to the shipping address section. After speaking to the tutor support them, I realised that the problem was that the fields didn't have a name="" attribute in HTML, so the Python code that I was using to get the data from it couldn't work and that's why I am getting False on most of the fields. Unfortunately, due to time I could not solve this.
 
-- **Search** 
+- **Delivery Info in View Order Page** 
+
+The shipping/billing address info is not displaying in the "View Order" table. After speaking to the tutor support team, I realised the problem was because the fields didn't have a name="" attribute in HTML, so the Python code that I was using to get the data from it couldn't work and that's why I am getting False on most of the fields. Unfortunately, due to time I could not solve this.
+
 
 
 ### Code Validators 
