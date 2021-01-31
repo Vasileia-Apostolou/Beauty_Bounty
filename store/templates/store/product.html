@@ -1,14 +1,14 @@
 {% extends 'store/base.html' %}
 {% load static %}
-{% block title %} 
-Product 
+{% block title %}
+Product
 {% endblock %}
 
 {% block content %}
 <div class="container">
     <div class="row">
         <div class="col-12 col-lg-6 col-md-6">
-          <div class="center-align"><img class="product-image" src="{{product.image.url}}" alt=""></div>
+            <div class="center-align"><img class="product-image" src="{{product.image.url}}" alt=""></div>
         </div>
         <div class="col-12 col-lg-6 col-md-6">
             <div>
@@ -21,9 +21,11 @@ Product
                 {% else %}
                 {% if product.stock <= 200 %}
                 <p class="product-status">Low in Stock!</p>
-                <a href="{% url 'add_cart' product.id %}" class="btn add-to-card-button hvr-float-shadow">Add To Cart</a>
+                <a href="{% url 'add_cart' product.id %}" class="btn add-to-card-button hvr-float-shadow">Add To
+                    Cart</a>
                 {% else %}
-                <a href="{% url 'add_cart' product.id %}" class="btn add-to-card-button hvr-float-shadow">Add To Cart</a>
+                <a href="{% url 'add_cart' product.id %}" class="btn add-to-card-button hvr-float-shadow">Add To
+                    Cart</a>
                 {% endif %}
                 {% endif %}
                 <br>
@@ -52,12 +54,12 @@ Product
         </div>
         {% else %}
         {% endif %}
-
         {% if reviews.count > 0 %}
         <ul class="list-group list-group-flush">
             {% for review in reviews %}
-            <li class="list-group-item"><h5>{{review.user.username}}</h5>
-            <p class="card-text">{{review.content}}</p>
+            <li class="list-group-item">
+                <h5>{{review.user.username}}</h5>
+                <p class="card-text">{{review.content}}</p>
             </li>
             {% endfor %}
         </ul>

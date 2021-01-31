@@ -58,4 +58,3 @@ class OrderItemAdmin(admin.TabularInline):
 
 
 admin.site.register(Review)
-

@@ -1,70 +1,70 @@
 {% extends 'store/base.html' %}
 {% load static %}
-{% block title %} 
+{% block title %}
 View Order
 {% endblock %}
 
 {% block content %}
 <div class="container">
-<div class="text-center">
-<br><br><br>
-<h1 class="view_order">View Order Details</h1>
-<br><br>
-<table class="table table-bordered">
-<tr>
-    <td class="text-left" colspan="2">
-        <b class="td">Order :</b> # {{ order.id }} <br>
-        <b class="td">Date :</b> {{ order.created|date:"d M Y" }} <br>
-        <b class="td">Total :</b> $ {{ order.total }} <br>
-        <b class="td">Status : </b><i class="far fa-check-circle status"></i><br>
-    </td>
-    <td class="text-left" colspan="2">
-     <b class="td">Billing Address: </b><br>
-     {{ order.billingName }} <br>
-     {{ order.billingAddress }} <br>
-     {{ order.billingCoutry }} <br>
-     {{ order.billingCity }} <br>
-     {{ order.billingZip }} <br>
-    </td>
-</tr>
-<tr>
-    <td class="td">Product Name</td>
-    <td class="td">Quantity</td>
-    <td class="td">Price</td>
-    <td class="td">Total</td>
-</tr>
-{% for item in order_items %}
-<tr>
-    <td>{{ item.product }}</td>
-    <td>{{ item.quantity }}</td>
-    <td>$ {{ item.price }}</td>
-    <td>$ {{ item.total }}</td>
-</tr>
-{% endfor %}
-<tr>
-    <td class="td text-right" colspan="3"><b> Order Total</b></td>
-    <td>$ {{ order.total }}</td>
-</tr>
-<tr>
-    <td class="text-left" colspan="2">
-    <b class="td">Shipping Address: </b><br>
-     {{ order.shippingName }} <br>
-     {{ order.shippingAddress }} <br>
-     {{ order.shippingCoutry }} <br>
-     {{ order.shippingCity }} <br>
-     {{ order.shippingZip }} <br>
-     </td>
-     <td class="text-left" colspan="2">
-        <b class="td">Payment Status:</b> 
+    <div class="text-center">
+        <br><br><br>
+        <h1 class="view_order">View Order Details</h1>
+        <br><br>
+        <table class="table table-bordered">
+            <tr>
+                <td class="text-left" colspan="2">
+                    <b class="td">Order :</b> # {{ order.id }} <br>
+                    <b class="td">Date :</b> {{ order.created|date:"d M Y" }} <br>
+                    <b class="td">Total :</b> $ {{ order.total }} <br>
+                    <b class="td">Status : </b><i class="far fa-check-circle status"></i><br>
+                </td>
+                <td class="text-left" colspan="2">
+                    <b class="td">Billing Address: </b><br>
+                    {{ order.billingName }} <br>
+                    {{ order.billingAddress }} <br>
+                    {{ order.billingCoutry }} <br>
+                    {{ order.billingCity }} <br>
+                    {{ order.billingZip }} <br>
+                </td>
+            </tr>
+            <tr>
+                <td class="td">Product Name</td>
+                <td class="td">Quantity</td>
+                <td class="td">Price</td>
+                <td class="td">Total</td>
+            </tr>
+            {% for item in order_items %}
+            <tr>
+                <td>{{ item.product }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>$ {{ item.price }}</td>
+                <td>$ {{ item.total }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td class="td text-right" colspan="3"><b> Order Total</b></td>
+                <td>$ {{ order.total }}</td>
+            </tr>
+            <tr>
+                <td class="text-left" colspan="2">
+                    <b class="td">Shipping Address: </b><br>
+                    {{ order.shippingName }} <br>
+                    {{ order.shippingAddress }} <br>
+                    {{ order.shippingCoutry }} <br>
+                    {{ order.shippingCity }} <br>
+                    {{ order.shippingZip }} <br>
+                </td>
+                <td class="text-left" colspan="2">
+                    <b class="td">Payment Status:</b>
+                    <br>
+                    The order #{{ order.id }} has been paid successfully.
+                </td>
+            </tr>
+        </table>
         <br>
-The order #{{ order.id }} has been paid successfully.
-     </td>
-</tr>
-</table>
-<br>
-<button class="btn btn-secondary" onclick="window.print();">
-<i class="fas fa-print"></i>Print</button>
-<br><br><br>
-</div>
+        <button class="btn btn-secondary" onclick="window.print();">
+            <i class="fas fa-print"></i>Print</button>
+        <br><br><br>
+    </div>
 </div>
 {% endblock %}

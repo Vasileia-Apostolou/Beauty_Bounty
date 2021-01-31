@@ -116,4 +116,3 @@ def viewOrder(request, order_id):
 def search(request):
     products = Product.objects.filter(name__contains=request.GET['product'])
     return render(request, 'store/search.html', {'products': products})
-

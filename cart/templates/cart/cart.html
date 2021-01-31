@@ -1,6 +1,6 @@
 {% extends 'store/base.html' %}
 {% load static %}
-{% block title %} 
+{% block title %}
 Cart
 {% endblock %}
 
@@ -14,7 +14,8 @@ Cart
     <br><br><br>
     <h2 class="empty-cart-text">Empty Cart</h2>
     <br>
-    <p class="click-here-text">Click <a class="here-text" href="{% url 'all_products' %}"> here </a> to start shopping</p>
+    <p class="click-here-text">Click <a class="here-text" href="{% url 'all_products' %}"> here </a> to start shopping
+    </p>
     <br><br><br><br>
 </div>
 {% else %}
@@ -27,89 +28,86 @@ Cart
 <div class="row card-page">
     <div class="col col-sm-12 col-md-6 col-lg-6">
         <table class="table">
-           <thead>
-               <tr>
-                   <th class="thead-text" colspan="4">
-                      Items
-                   </th>
-               </tr>
-           </thead>
-           {% for cart_item in cart_items %}
-           <tr>
-               <td>
-                   <a href="cart_item.product.get_url">
-                       <img src="{{cart_item.product.image.url}}" width="100" height="100" alt="">
-                   </a>
-               </td>
-               <td>
-                   {{cart_item.product.name}}
-                   <br>
-                   SKU: {{cart_item.product.id}}
-                   <br>
-                   Price: {{cart_item.product.price}} 
-                   <br>
-                   Quantity: {{cart_item.quantity}} x {{cart_item.product.price}}
-               </td>
-               <td>
-                   Total:  {{cart_item.total}}
-               </td>
-               {% if cart_item.quantity < cart_item.product.stock %}
-               <td>
-                   <a class="" href="{% url 'add_cart' cart_item.product.id %}"><i class="fas fa-plus"></i></a>
-                   <a class="" href="{% url 'decrease_quantity' cart_item.product.id %}"><i class="fas fa-minus"></i></a>
-                   <a class="" href="{% url 'remove_product' cart_item.product.id %}"><i class="far fa-trash-alt"></i></a>
-               </td>
-               {% else %}
-               <td>
-                <h6 class="out-of-stock-text">Out Of Stock</h6>
-                <a class="" href="{% url 'decrease_quantity' cart_item.product.id %}"><i class="fas fa-minus"></i></a>
-                <a class="" href="{% url 'remove_product' cart_item.product.id %}"><i class="far fa-trash-alt"></i></a>
-               {% endif %}
-               </td>
-           </tr>
-           {% endfor %}
-       </table>
+            <thead>
+                <tr>
+                    <th class="thead-text" colspan="4">
+                        Items
+                    </th>
+                </tr>
+            </thead>
+            {% for cart_item in cart_items %}
+            <tr>
+                <td>
+                    <a href="cart_item.product.get_url">
+                        <img src="{{cart_item.product.image.url}}" width="100" height="100" alt="">
+                    </a>
+                </td>
+                <td>
+                    {{cart_item.product.name}}
+                    <br>
+                    SKU: {{cart_item.product.id}}
+                    <br>
+                    Price: {{cart_item.product.price}}
+                    <br>
+                    Quantity: {{cart_item.quantity}} x {{cart_item.product.price}}
+                </td>
+                <td>
+                    Total: {{cart_item.total}}
+                </td>
+                {% if cart_item.quantity < cart_item.product.stock %}
+                <td>
+                    <a class="" href="{% url 'add_cart' cart_item.product.id %}"><i class="fas fa-plus"></i></a>
+                    <a class="" href="{% url 'decrease_quantity' cart_item.product.id %}"><i
+                            class="fas fa-minus"></i></a>
+                    <a class="" href="{% url 'remove_product' cart_item.product.id %}"><i
+                            class="far fa-trash-alt"></i></a>
+                </td>
+                {% else %}
+                <td>
+                    <h6 class="out-of-stock-text">Out Of Stock</h6>
+                    <a class="" href="{% url 'decrease_quantity' cart_item.product.id %}"><i
+                            class="fas fa-minus"></i></a>
+                    <a class="" href="{% url 'remove_product' cart_item.product.id %}"><i
+                            class="far fa-trash-alt"></i></a>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
     </div>
     <div class="col col-sm-12 col-md-6 col-lg-6">
-       <table class="table">
-           <thead>
-               <tr>
-                   <th class="thead-text" olspan="4">
-                       Check Out
-                   </th>
-               </tr>
-           </thead>
-           <tbody>
-               <tr>
-                   <td class="text-center">
-                      Order Summary
-                   </td>
-               </tr>
-               <tr>
-               <td class="total-price">
-                <strong>Total: ${{total}}</strong>
-               </td>
-               </tr>
-               </tbody>
-       </table>
-       <div>
-           <form class="hvr-bob" action="" method="POST">
-               {% csrf_token %}
-               <script src="https://checkout.stripe.com/checkout.js"
-               class="stripe-button"
-               data-key="{{ data_key }}"
-               data-amount="{{ stripe_total }}"
-               data-name="Beauty Bounty"
-               data-description="{{ description }}"
-               data-locale="auto"
-               data-currency="usd"
-               data-shipping-address="true"
-               data-billing-address="true"
-               data-zip-code="true">
-               </script>
-           </form>
-               <a href="{% url 'home' %}" class="btn hvr-bob go-back-button">Go Back</a>
-       </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="thead-text" olspan="4">
+                        Check Out
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">
+                        Order Summary
+                    </td>
+                </tr>
+                <tr>
+                    <td class="total-price">
+                        <strong>Total: ${{total}}</strong>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <form class="hvr-bob" action="" method="POST">
+                {% csrf_token %}
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{ data_key }}"
+                    data-amount="{{ stripe_total }}" data-name="Beauty Bounty" data-description="{{ description }}"
+                    data-locale="auto" data-currency="usd" data-shipping-address="true" data-billing-address="true"
+                    data-zip-code="true">
+                    </script>
+            </form>
+            <a href="{% url 'home' %}" class="btn hvr-bob go-back-button">Go Back</a>
+        </div>
     </div>
 </div>
 {% endif %}

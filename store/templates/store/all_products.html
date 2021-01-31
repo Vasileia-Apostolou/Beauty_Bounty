@@ -1,6 +1,6 @@
 {% extends 'store/base.html' %}
 {% load static %}
-{% block title %} 
+{% block title %}
 All Products
 {% endblock %}
 
@@ -11,12 +11,11 @@ All Products
     <div class="row">
         {% for product in products %}
         <div class="col-6 mx-auto col-md-4 col-lg-3 hvr-grow">
-            <!-- <div class="card"> -->
             <div>
                 <div class="py-2">
-                 <a href="{{product.category_url}}"> 
-                    <img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}">
-                </a>
+                    <a href="{{product.category_url}}">
+                        <img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}">
+                    </a>
                 </div>
                 <div class="card-footer">
                     <p>{{product.name}}</p>

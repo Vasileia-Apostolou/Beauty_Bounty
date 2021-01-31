@@ -12,10 +12,10 @@ body {
     flex-direction: column;
 }
 
-.try {
+/* .try {
     display: flex;
     padding-top: 5px;
-}
+} */
 
 /* -------- NAV -------- */
 .navbar {
@@ -36,9 +36,9 @@ body {
 }
 
 .navbar li a {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    color: black;
+    color: #481679 !important;
 }
 
 .navbar-icons {
@@ -70,6 +70,7 @@ body {
     width: 100%;
 }
 
+
 /* -------- BUTTONS ---------*/ 
 .registration-button {
     background-color: black;
@@ -89,9 +90,6 @@ body {
 .start-shopping-button:hover {
     background-color: #5b4b5e;
     
-}
-.stripe-button {
-    background-color: blueviolet;
 }
 
 .new-account-button {
@@ -123,7 +121,32 @@ body {
 .post-button {
     background-color: #000000 !important;
     color: #fcdcf8 !important;
+    font-size: 18px;
+}
 
+.stripe-button-el {
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.stripe-button-el span { 
+    height: 35px !important;
+    font-family: "Quicksand", sans-serif !important;
+    font-size: 16px !important;
+}
+
+.go-back-button {
+    background-color: black;
+    color: #fcdcf8;
+    float: right;
+    margin-right: 18%;
+    margin-top: 18px;
+}
+
+.add-to-card-button {
+    margin-left: 37%;
+    background-color: black;
+    color: #fcdcf8  !important;
 }
 
 /* -------- ABOUT -------- */
@@ -192,15 +215,14 @@ body {
     text-align: center;
     text-transform: uppercase;
     text-shadow: 1px 0px 2px #541e73;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .product-image {
-width: 90%;
-min-height: auto;
-padding-top: 25%;
-/* padding-bottom: 10%; */
-background-size: cover;
+    width: 90%;
+    min-height: auto;
+    padding-top: 25%;
+    background-size: cover;
 }
 
 .card-footer {
@@ -230,6 +252,7 @@ background-size: cover;
     text-decoration: none;
 }
 
+
 /* ------ HISTORY -------- */
 .order-history-text {
     text-align: center;
@@ -250,6 +273,7 @@ background-size: cover;
     color: green;
 }
 
+
 /* ------- VIEW ORDER --------*/
 .view_order {
    text-align: center;
@@ -263,6 +287,7 @@ background-size: cover;
    font-size: 18px;
    text-shadow: 0px 0px 1px #5b4b5e;
 }
+
 
 /* ------- LOGIN & REGISTRATION ---------*/
 .errorlist li {
@@ -297,6 +322,7 @@ background-size: cover;
     font-size: 20px;
 }
 
+
 /* -------- REVIEWS --------*/
 .reviews-cart {
     margin-bottom: 5%;
@@ -310,75 +336,8 @@ background-size: cover;
     font-size: 25px;
 }
 
-/* -------- FOOTER --------*/
-footer {
-   margin-top: auto;
-   display: flex;  
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 100%;
-   background-color: #f8f0ff;
-   color: black;
-   text-align: center;
-   padding-top: 30px; 
-}
-
-
-.contact-footer-text,
-.connect-footer-text {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 7px;
-    font-weight: bold;
-    padding-top: 10px;
-    padding-bottom: 25px;
-    text-shadow: 0px 0px 5px white;
-}
-
-.connect-footer-text {
-    text-transform: uppercase;
-    letter-spacing: 7px;
-    padding-top: 5px;
-}
-
-.contact-by-email {
-    text-decoration: none;
-    color: #391066;
-}
-
-.contact-by-email:hover{
-    color: #511694;
-    text-shadow: 0px 0px 1px #9e62d9;
-
-}
-
-.socials {
-    display: flex;
-}
-
-.socials li a i {
-    font-size: 30px;
-    color: #391066;
-    text-shadow: 0px 0px 1px #9e62d9;    
-}
-
-footer ul{
-  justify-content:space-evenly;
-  text-align:center;
-}
-
-footer ul li{
-  display:inline-block;
- }
-
-.socials li a i:hover{
-    color: #541e73;
-    text-shadow: 0px 0px 1px #982bd6;
-}
 
 /* ------ CART --------*/
-
 .card-page {
     margin-bottom: 30px;
 }
@@ -425,46 +384,80 @@ footer ul li{
     font-size: 18px;
 }
 
-
-/* ------- BUTTONS -------- */
-.stripe-button-el {
-    margin-left: 50px;
-    margin-top: 20px;
+/* -------- FOOTER --------*/
+footer {
+   margin-top: auto;
+   display: flex;  
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 100%;
+   background: url("../images/footer.jpg");
+   color: black;
+   text-align: center;
+   padding-top: 30px; 
 }
 
-.stripe-button-el span { 
-    height: 35px !important;
-    font-family: "Quicksand", sans-serif !important;
-    font-size: 16px !important;
+.contact-footer-text,
+.connect-footer-text {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    text-shadow: 0px 0px 5px white;
 }
 
-.go-back-button {
-    background-color: black;
-    color: #fcdcf8;
-    float: right;
-    margin-right: 18%;
-    margin-top: 18px;
+.contact-by-email {
+    text-decoration: none;
+    color: #391066;
 }
 
-.add-to-card-button {
-    margin-left: 37%;
-    background-color: black;
-    color: #fcdcf8  !important;
+.contact-by-email:hover{
+    color: #511694;
+    text-shadow: 0px 0px 1px #9e62d9;
+}
+
+.socials {
+    display: flex;
+}
+
+.socials li a i {
+    font-size: 30px;
+    color: #391066;
+    text-shadow: 0px 0px 1px #9e62d9;    
+}
+
+footer ul{
+   justify-content:space-evenly;
+   text-align:center;
+}
+
+footer ul li{
+   display:inline-block;
+}
+
+.socials li a i:hover{
+    color: #541e73;
+    text-shadow: 0px 0px 1px #982bd6;
 }
 
 
 /* ------- MEDIA QUERIES ---------*/
 @media only screen and (min-width: 768px) {
-
     .copyright {
-    float: right;
-    margin-right: 45px; 
-}   
+        float: right;
+        margin-right: 45px; 
+    }   
 }
 
 @media only screen and (max-width: 767px) { 
+    .product-name {
+         margin-top: 30px;
+    }
 
-.product-name {
-    margin-top: 30px;
-}
+    .mobile-nav-item {
+        text-align: left;
+    }
 }

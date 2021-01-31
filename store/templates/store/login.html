@@ -1,7 +1,7 @@
 {% extends 'store/base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
-{% block title %} 
+{% block title %}
 Login
 {% endblock %}
 
@@ -16,7 +16,8 @@ Login
             </h2>
             <p class="register-now-text">Register Now</p>
             <br>
-          <div class="center-align"><a href="{% url 'register' %}" class="btn new-account-button hvr-float-shadow">Create New Account</a></div>
+            <div class="center-align"><a href="{% url 'register' %}"
+                    class="btn new-account-button hvr-float-shadow">Create New Account</a></div>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-6">
             <br><br>
@@ -24,7 +25,8 @@ Login
             <form method="POST">
                 {% csrf_token %}
                 <p>{{ form | crispy }}</p>
-              <div class="center-align"><button type="submit" class="btn login-button hvr-float-shadow">Login</button></div>
+                <div class="center-align"><button type="submit" class="btn login-button hvr-float-shadow">Login</button>
+                </div>
             </form>
             <br>
         </div>

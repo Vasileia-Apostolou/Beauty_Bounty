@@ -20,6 +20,7 @@
   - [**Frameworks**](#Frameworks)
   - [**Hosting**](#Hosting)
 - [**Testing**](#Testing)
+  - [**Cart Details Testing**](#Card-Details-Testing)
   - [**Browsers**](#Browsers)
   - [**Devices**](#Devices)
   - [**Testing User Stories**](#Testing-User-Stories)
@@ -39,6 +40,7 @@
 
 ## About 
 My online store sells only the best beauty products of the season from makeup, skincare and even fragrances. It's the place where beauty lovers visit to get inspired and purchase the hottest products out there, to make them look and feel their best! 
+
 
 ## Why This Project? 
 This is an e-commerce store created for my 4th Milestone Project - Full Stack with Django for [Code Institute](https://codeinstitute.net/). My app allows users to search, view and purchase beauty products.
@@ -209,6 +211,13 @@ Chrome DevTools is a set of web developer tools built directly into the Google C
 
 ## Testing
 
+### Cart Details Testing
+To test the website's checkout functionality, use the following payment credentials:
+
+- **Card number:** 4242 4242 4242 4242
+- **Expiry date:** Any date in the future
+- **CV2 number:** Any 3 digits
+
 ### Browsers
 This web application was tested in the following browsers to ensure the web application is compatible and responsive.
  * Chrome
@@ -339,7 +348,10 @@ In the stripe payment form, the billing address section will not allow the user 
 
 
 ### Code Validators 
-The web application's HTML and CSS code has been tested in [W3C Validator](https://validator.w3.org/). The JavaScript code has been tested in [JS Hint](https://jshint.com/). Python syntax has been tested in [Pep8 Online Tool](http://pep8online.com/) and responsiveness was tested in [Resposinator](https://www.responsinator.com/), [Am I Responsive](http://ami.responsivedesign.is/) and [Mobile-Friendly Test](https://search.google.com/test/mobile-friendly).
+The web application's HTML and CSS code has been tested in [W3C Validator](https://validator.w3.org/). The JavaScript code has been tested in [JS Hint](https://jshint.com/). Python syntax has been tested in [Pep8 Online Tool](http://pep8online.com/) and responsiveness in this [Mobile-Friendly Test](https://search.google.com/test/mobile-friendly).
+
+* My Python code passed the validator, except a few lines with the "line too long" warning.
+* My CSS code passed the validator.
 
 ## Deployment
 
