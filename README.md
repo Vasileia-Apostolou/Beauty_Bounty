@@ -192,6 +192,21 @@ Chrome DevTools is a set of web developer tools built directly into the Google C
 
 ## Testing
 
+### Browsers
+This web application was tested in the following browsers to ensure the web application is compatible and responsive.
+ * Chrome
+ * Mozilla
+ * Safari
+ * Opera 
+ * Internet Explorer
+
+ ### Devices
+ This web application was tested in the following devices to ensure the web application is compatible and responsive.
+ * IPhone 8 Plus
+ * Huawei P30 Pro 
+ * Huawei Mediapad T5
+ * MacBook Pro
+
 ### Resolved
 * -icons floating
 * SECRET KEY EXPOSED! x2
@@ -333,7 +348,7 @@ Once the migrations are completed and the super user has been created successful
 
 ## Code
 * Dropdown menu was taken from [W3 Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_hover)
-* Checkout code taken from Stripe
+* Checkout code taken from [Stripe](https://stripe.com/en-dk)
 * Navbar HTML code was taken from [Bootstrap](https://getbootstrap.com/)
 
 ## Media
@@ -350,7 +365,7 @@ None of the images belong to me.
 * Most of this project's functionality was taken from [this Udemy course](https://www.udemy.com/course/build-ecommerce-website-to-master-django-and-python/learn/lecture/16779602?start=0#content)
 * Code Institute's Tutor assistance has helped my a lot in solving and understanding the cause of the errors and issues I was facing
 * Special thanks to my mentor Gerard McBride 
-* [Slack Overflow](https://stackoverflow.com/) has been very helpful for solving errors
+* [Slack Overflow](https://stackoverflow.com/) has been very helpful in solving errors
 
 ## Disclaimer
 This project is for educational purposes only.
