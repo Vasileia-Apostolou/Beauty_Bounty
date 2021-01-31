@@ -51,7 +51,6 @@ The front-end display and functionality uses HTML, CSS, JavaScript and the back-
 As a user, I want to be able to:
 * Look at all the app's products
 * Search for a specific product
-* Look into different product categories
 * View product information
 * View my cart item(s)
 * Add a product to my cart
@@ -59,9 +58,6 @@ As a user, I want to be able to:
 * Delete a product from my cart
 * View order summary and total before proceeding with the payment
 * Purchase the added cart item(s) with my credit card details
-* Have a shipping or billing address option
-* Get a confirmation when my payment goes through
-* Get a notification if my payment doesn't go through
 * Create my personal account
 * Login/Logout of my personal account
 * Contact costumer service via email or call
@@ -85,7 +81,7 @@ During the development process some changes were made.
 * [Search](https://github.com/Vasileia-Apostolou/Beauty_Bounty/blob/master/store/static/wireframes/Search.pdf)
 
 ### Design
-I wanted to keep my website clean, fresh and sophisticated. I used a lavender color for the navbar and footer to add some character but kept everything else white. Navbar brand and icons were given a deep almost black-looking purple. Typography is "Great Vibes" for the navbar brand and "Quicksand" for the body html code. 
+I wanted to keep my website clean, fresh and sophisticated. I used a pink marble image for the navbar background to add some character and a lavender color to the footer, but kept everything else white. The same navbar background image was used for the reviews table. Navbar brand and icons were given a deep almost black-looking purple. For the free shipping banner I added a black background color to add contrast and a pink color for the text to match the color of the navbar. The buttons have the same background color and text color as the free shipping banner. Typography is "Great Vibes" for the navbar brand and "Quicksand" for the body html code. 
 
 ## Features
 
@@ -258,12 +254,7 @@ or
 3. Fill in your personal information
 4. Click "Pay"
 
-- **As a user, I want to be able to Have a shipping or billing address option**
-1. Go to your cart
-2. Click on "Pay With Card"
-3. Choose shipping or billing address section
-
-- **As a user, I want to be able to Have a shipping or billing address option**
+- **As a user, I want to be able to create my personal account**
 1. Click on the user icon in the navbar.
 2. Click on "Create Account"
 2. Fill in the Register Form with a username, email address and password.
