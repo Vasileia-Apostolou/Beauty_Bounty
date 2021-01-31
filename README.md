@@ -351,3 +351,6 @@ None of the images belong to me.
 * Code Institute's Tutor assistance has helped my a lot in solving and understanding the cause of the errors and issues I was facing
 * Special thanks to my mentor Gerard McBride 
 * [Slack Overflow](https://stackoverflow.com/) has been very helpful for solving errors
+
+## Disclaimer
+This project is for educational purposes only.
