@@ -55,15 +55,17 @@ Cart
                </td>
                {% if cart_item.quantity < cart_item.product.stock %}
                <td>
-                   <a class="add-quantity" href="{% url 'add_cart' cart_item.product.id %}"><i class="fas fa-plus"></i></a>
+                   <a class="" href="{% url 'add_cart' cart_item.product.id %}"><i class="fas fa-plus"></i></a>
                    <a class="" href="{% url 'decrease_quantity' cart_item.product.id %}"><i class="fas fa-minus"></i></a>
                    <a class="" href="{% url 'remove_product' cart_item.product.id %}"><i class="far fa-trash-alt"></i></a>
                </td>
                {% else %}
+               <td>
                 <h6 class="out-of-stock-text">Out Of Stock</h6>
                 <a class="" href="{% url 'decrease_quantity' cart_item.product.id %}"><i class="fas fa-minus"></i></a>
                 <a class="" href="{% url 'remove_product' cart_item.product.id %}"><i class="far fa-trash-alt"></i></a>
                {% endif %}
+               </td>
            </tr>
            {% endfor %}
        </table>

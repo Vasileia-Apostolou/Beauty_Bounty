@@ -29,11 +29,13 @@ Create a New Account
         </div>
         <h2 class="welcome-message">Welcome to beauty bounty!</h2>
         <br><br>
-        <a href="{% url 'all_products' %}">
+       <div class="center-align"><a href="{% url 'all_products' %}">
                <button type="button" class="btn start-shopping-button hvr-float-shadow">Start Shopping!</button>
            </a>
+        </div>
     </div>
     {% endif %}
+    
 </div>
 <br>
 {% endblock %}
