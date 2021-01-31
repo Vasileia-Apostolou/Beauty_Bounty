@@ -171,7 +171,7 @@ CSS was used for styling the content.
 
 3. [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-JavaScript was used to create the main functional logic of this app. 
+JavaScript use for this project is from Stripe.
 
 4. [Python](https://en.wikipedia.org/wiki/Python_programming_language)
 
@@ -204,7 +204,6 @@ Chrome DevTools is a set of web developer tools built directly into the Google C
 ### Frameworks 
 1. [Django](https://www.djangoproject.com/) is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
 
-2. [jQuery](https://jquery.com/) is a fast, small, and feature-rich JavaScript library. It was used in this project to simplify the DOM.
 
 ### Hosting 
 * [Heroku](https://www.heroku.com/) was used as the hosting platform to deploy this app.
@@ -324,11 +323,11 @@ or
 
 - **Plus Icon**
 
-In the cart page, when a product was reaching maximum in-stock quantity, the "+" icon was floating on top of the table. I realised that this was caused because in the else-block I haven't defined a table cell.
+In the cart page, when a product was reaching maximum in-stock quantity, the "+" icon was floating on top of the table. I realised that this was caused because in the else-block I did not define a table cell.
 
 - **Secret Key Exposed** 
 
-During the development proccess, I realised that I have exposed the stripe secret key, along with the database ProgresSQL URI. After I contacted tutor support, I have been advised to destroy the database and create a new one. As fas as the stripe key, I hid it in an env.py file and include it to the .gitignore file.
+During the development proccess, I realised that I had exposed the stripe secret key, along with the database ProgresSQL URI. After I contacted tutor support, I have been advised to destroy the database and create a new one. As fas as the stripe key, I hid it in an env.py file and include it to the .gitignore file.
 
 - **Cart App** 
 
@@ -348,7 +347,10 @@ In the stripe payment form, the billing address section will not allow the user 
 
 The shipping/billing address info is not displaying in the "View Order" table. After speaking to the tutor support team, I realised the problem was because the fields didn't have a name="" attribute in HTML, so the Python code that I was using to get the data from it couldn't work and that's why I am getting False on most of the fields. Unfortunately, due to time I could not solve this.
 
+- **Search** 
 
+During the testing proccess, I realised that the search functionality is not working in some devices. In my MacBook Pro, there are no results displayed when a product is being searched, meanwhile in my Huawei P30 Pro, Huawei Mediapad T5 and Iphone 8 Plus the search functionality work properly. 
+I wasn't really sure whay was causing that and due to time, I unfortunately could not solve this.
 
 ### Code Validators 
 The web application's HTML and CSS code has been tested in [W3C Validator](https://validator.w3.org/). The JavaScript code has been tested in [JS Hint](https://jshint.com/). Python syntax has been tested in [Pep8 Online Tool](http://pep8online.com/) and responsiveness in this [Mobile-Friendly Test](https://search.google.com/test/mobile-friendly).

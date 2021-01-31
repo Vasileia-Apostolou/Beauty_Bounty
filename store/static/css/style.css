@@ -12,11 +12,6 @@ body {
     flex-direction: column;
 }
 
-/* .try {
-    display: flex;
-    padding-top: 5px;
-} */
-
 /* -------- NAV -------- */
 .navbar {
     background: url("../images/navbar5.jpg");
@@ -122,6 +117,7 @@ body {
     background-color: #000000 !important;
     color: #fcdcf8 !important;
     font-size: 18px;
+    letter-spacing: 2px;
 }
 
 .stripe-button-el {
@@ -333,6 +329,7 @@ body {
     background: url("../images/navbar5.jpg");
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 4px;
     font-size: 25px;
 }
 
