@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from cart.models import Product, Order, OrderItem, Review
+from cart.models import Product, Order, OrderItem, Review, Category
 from django.core.exceptions import ObjectDoesNotExist
 import stripe
 from django.conf import settings

@@ -87,7 +87,6 @@ During the development process some changes were made.
 ### Design
 I wanted to keep my website clean, fresh and sophisticated. I used a lavender color for the navbar and footer to add some character but kept everything else white. Navbar brand and icons were given a deep almost black-looking purple. Typography is "Great Vibes" for the navbar brand and "Quicksand" for the body html code. 
 
-
 ## Features
 
 ### Functionality
@@ -105,6 +104,9 @@ Users can view all the app's products both in-stock and out-of-stock by clicking
 
 - **View Product** -
 The user can click on a specific product to view product details. It will take the user to a new page where by the product name, price and description will be displayed. If the product is in-stock there will be an "Add To Cart" button which if clicked, will take the user to their cart, but if the product is out-of-stock there will be no action but a heading stating "Out Of Stock".
+
+- **Review** -
+The user can see reviews that other users have left. In order to post a review the user needs to have an account. If the user doesn't have an account, posting a review is not an option.
 
 - **Cart** -
 In the cart we have two sections. Items section and Checkout section. In the items section is the order summary. The products that were added to the cart by the user are being displayed along with their name, price and quantity set to 1 by default. However, the user is able to increase or decrease the quantity by clicking on the + or - icon accordingly, or delete the product from their cart by clicking on the bin icon. If the product is no longer in-stock, the + icon will disappear leaving the user with no choice of increasing the product quantity. The total of each product is being calculated next to it(eg. 100x1 = $100 or 100x3 = $300). On the checkout section the total amount of all products are being calculated and the user can proceed with the payment by clicking on the "Pay With Card" button. Once the button is clicked a form will appear where by the user will have to fill in personal information such as shipping or billing address and credit card details. 
@@ -138,6 +140,18 @@ The footer includes two sections. A contact section with a clickable email addre
 - **Carousel Slide**
 
 In the future, I would like to add a carousel slider to display makeup looks and ideas to inspire the page visitors.
+
+- **Categories**
+
+In the future, I would like to add a navbar dropdown menu where by the users can see products based on their categories.
+
+- **Best Sellers**
+
+In the future, I would like to add a "Best Sellers" navbar item where by it will display the best selling products of Beauty Bounty.
+
+- **NEW**
+
+In the future, I would like to add a "New" navbar item where by it will display the all the new products that were added in Beauty Bounty.
 
 ## Technologies Used
 

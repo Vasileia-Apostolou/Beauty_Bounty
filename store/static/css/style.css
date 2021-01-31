@@ -498,6 +498,7 @@ footer ul li{
 
 /* ------- MEDIA QUERIES ---------*/
 @media only screen and (min-width: 768px) {
+
     .copyright {
     float: right;
     margin-right: 45px; 
