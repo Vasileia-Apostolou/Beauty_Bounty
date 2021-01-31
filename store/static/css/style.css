@@ -318,6 +318,10 @@ body {
     font-size: 20px;
 }
 
+.please-login-text {
+    text-align: center;
+}
+
 
 /* -------- REVIEWS --------*/
 .reviews-cart {
